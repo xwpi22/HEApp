@@ -1,0 +1,17 @@
+const loginRoute = '/login/';
+const registerRoute = '/register';
+const numberConnectionReadyRoute = '/numberconnection_game_ready';
+const numberConnectionSteadyRoute = '/numberconnection_game_steady';
+const numberConnectionGameRoute = '/numberconnection_game_start';
+const colorVsWordsReadyRoute = '/colorvswords_game_ready';
+const colorVsWordsGameReadyRoute = '/colorvswords_game_start';
+const verifyEmailRoute = '/verify-email';
+const homeRoute = '/home_view';
+const accountRoute = '/account_view';
+const recordsRoute = '/records_view';
+const ncgameoverRoute = '/ncgameover_view';
+const cwgameoverRoute = '/cwgameover_view';
+const soldiersInFormationGameReadyRoute = '/soldiers_in_formation_game_ready';
+const sifgameoverRoute = '/soldiers_in_formation_game_over';
+const forgotPasswordRoute = '/forget_password_view';
+// const createOrUpdateNoteRoute = '/notes/new-note/';
