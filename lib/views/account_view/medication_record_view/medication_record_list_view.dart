@@ -52,15 +52,24 @@ class _MedicationListViewState extends State<MedicationListView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: globColor,
+        backgroundColor: Color(0xFF2E609C),
         title: Text(
           '每日用藥',
-          style: TextStyle(fontSize: 20.sp),
+          style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                color: Theme.of(context).colorScheme.onPrimary,
+                fontSize: 20.h,
+              ),
         ),
         toolbarHeight: 60.h,
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
         actions: [
           IconButton(
-            icon: const Icon(Icons.refresh),
+            icon: const Icon(
+              Icons.refresh,
+              color: Colors.white,
+            ),
             onPressed: () {
               _fetchMedications(); // Refresh medications
             },
@@ -80,11 +89,11 @@ class _MedicationListViewState extends State<MedicationListView> {
                   .map((medication) => ListTile(
                         title: Text(
                           medication.name,
-                          style: TextStyle(fontSize: 20.sp),
+                          style: TextStyle(fontSize: 24.sp),
                         ),
                         subtitle: Text(
                           '劑量: ${medication.dosage} 份/顆 次數: 一天${medication.frequency} 次',
-                          style: TextStyle(fontSize: 10.sp),
+                          style: TextStyle(fontSize: 16.sp),
                         ),
                         trailing: Checkbox(
                           value: medication.isTaken,

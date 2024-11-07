@@ -54,9 +54,12 @@ class _AccountViewState extends State<AccountView> {
     final futureBuilderKey = ValueKey(_userEmail);
     return Scaffold(
         appBar: AppBar(
-          title: const Text('會員專區'),
+          title: Text('會員專區',
+              style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                    color: Theme.of(context).colorScheme.onSecondary,
+                  )),
+          backgroundColor: Color(0xFF2E609C),
           toolbarHeight: 60.h,
-          backgroundColor: globColor,
           actions: <Widget>[
             IconButton.outlined(
               onPressed: () async {
@@ -73,6 +76,7 @@ class _AccountViewState extends State<AccountView> {
               icon: Icon(
                 Icons.logout,
                 size: 20.sp,
+                color: Colors.white,
               ),
             ),
           ],
@@ -224,8 +228,8 @@ class _AccountViewState extends State<AccountView> {
                         children: [
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              maximumSize: Size(120.w, 100.h),
-                              minimumSize: Size(100.w, 60.h),
+                              maximumSize: Size(120.w, 120.h),
+                              minimumSize: Size(100.w, 80.h),
                               // backgroundColor: const Color.fromARGB(255, 27, 97, 149),
                               backgroundColor: Colors.white,
                               shape: const RoundedRectangleBorder(
@@ -248,16 +252,17 @@ class _AccountViewState extends State<AccountView> {
                               style: TextStyle(
                                 fontSize: 27.sp,
                                 fontWeight: FontWeight.bold,
-                                color: globColor,
+                                color: Color(0xFF2E609C),
                               ),
-                              textScaleFactor: 1,
                             ),
                           ),
-                          const SizedBox(width: 10.0),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              maximumSize: Size(120.w, 100.h),
-                              minimumSize: Size(100.w, 60.h),
+                              maximumSize: Size(120.w, 120.h),
+                              minimumSize: Size(100.w, 80.h),
                               backgroundColor: Colors.white,
                               shape: const RoundedRectangleBorder(
                                 side: BorderSide(
@@ -279,16 +284,15 @@ class _AccountViewState extends State<AccountView> {
                               style: TextStyle(
                                 fontSize: 27.sp,
                                 fontWeight: FontWeight.bold,
-                                color: globColor,
+                                color: Color(0xFF2E609C),
                               ),
-                              textScaleFactor: 1,
                             ),
                           ),
                           const SizedBox(width: 10.0),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              maximumSize: Size(120.w, 100.h),
-                              minimumSize: Size(100.w, 60.h),
+                              maximumSize: Size(120.w, 120.h),
+                              minimumSize: Size(100.w, 80.h),
                               backgroundColor: Colors.white,
                               shape: const RoundedRectangleBorder(
                                 side: BorderSide(
@@ -310,9 +314,8 @@ class _AccountViewState extends State<AccountView> {
                               style: TextStyle(
                                 fontSize: 27.sp,
                                 fontWeight: FontWeight.bold,
-                                color: globColor,
+                                color: Color(0xFF2E609C),
                               ),
-                              textScaleFactor: 1,
                             ),
                           ),
                         ],

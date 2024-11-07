@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heapp/constants/routes.dart';
 import 'package:heapp/globals/gobals.dart';
+import 'package:sqflite/utils/utils.dart';
 
 class GamesHomeView extends StatefulWidget {
   const GamesHomeView({super.key});
@@ -36,11 +37,11 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 maximumSize:
                     Size(200.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
-                backgroundColor: Colors.white,
+                backgroundColor: Color(0xFF2E609C),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     // color: Colors.black,
-                    color: Colors.white,
+                    color: Colors.black,
                     width: 1.5.w,
                   ),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -53,7 +54,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 '數字點點名',
                 style: TextStyle(
                   fontSize: 30.sp,
-                  color: globColor,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -65,11 +66,11 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 maximumSize:
                     Size(200.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
-                backgroundColor: Colors.white,
+                backgroundColor: Color(0xFF2E609C),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     // color: Colors.black,
-                    color: Colors.white,
+                    color: Colors.black,
                     width: 1.5.w,
                   ),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -82,7 +83,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 '五顏配六色',
                 style: TextStyle(
                   fontSize: 30.sp,
-                  color: globColor,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -94,11 +95,11 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 maximumSize:
                     Size(200.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
-                backgroundColor: Colors.white,
+                backgroundColor: Color(0xFF2E609C),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     // color: Colors.black,
-                    color: Colors.white,
+                    color: Colors.black,
                     width: 1.5.w,
                   ),
                   borderRadius: const BorderRadius.all(Radius.circular(20)),
@@ -112,7 +113,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 '按鈕排排站',
                 style: TextStyle(
                   fontSize: 30.sp,
-                  color: globColor,
+                  color: Colors.white,
                 ),
               ),
             ),

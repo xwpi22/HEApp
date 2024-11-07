@@ -68,12 +68,18 @@ class _MessageBoardViewState extends State<MessageBoardView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: globColor,
+        backgroundColor: Color(0xFF2E609C),
         title: Text(
           "留言板",
-          style: TextStyle(fontSize: 20.sp),
+          style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                color: Theme.of(context).colorScheme.onPrimary,
+                fontSize: 20.h,
+              ),
         ),
         toolbarHeight: 60.h,
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),

@@ -43,13 +43,17 @@ class MyApp extends StatelessWidget {
         // Corrected here
         title: 'Number Connection Test',
         theme: ThemeData(
-          primarySwatch: Colors.green,
-          primaryColor: const Color.fromARGB(255, 120, 169, 140),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Color(0xFF2E609C),
+          ),
+          // primarySwatch: Colors.white,
+          primaryColor: Colors.white,
+          secondaryHeaderColor: Colors.white,
           textTheme: TextTheme(
             displayLarge: TextStyle(
               fontSize: 50.0.sp,
               fontWeight: FontWeight.bold,
-              color: const Color.fromARGB(255, 120, 169, 140),
+              color: Color(0xFF2E609C),
             ),
             headlineLarge: TextStyle(
               fontSize: 36.0.sp,
@@ -58,12 +62,12 @@ class MyApp extends StatelessWidget {
             ),
             headlineMedium: TextStyle(
               fontSize: 30.0.sp,
-              // fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold,
               color: Colors.grey.shade800,
             ),
             headlineSmall: TextStyle(
               fontSize: 24.sp,
-              // fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.bold,
               color: Colors.grey.shade800,
             ),
             titleLarge: TextStyle(fontSize: 30.0.sp),
@@ -74,7 +78,7 @@ class MyApp extends StatelessWidget {
             labelMedium: TextStyle(fontSize: 16.0.sp),
           ),
           buttonTheme: const ButtonThemeData(
-            buttonColor: Color.fromARGB(255, 120, 169, 140),
+            buttonColor: Color(0xFF2E609C),
           ),
           textButtonTheme: TextButtonThemeData(
             style: TextButton.styleFrom(
@@ -82,7 +86,7 @@ class MyApp extends StatelessWidget {
                 fontSize: 16.sp,
                 fontWeight: FontWeight.bold,
               ),
-              foregroundColor: const Color.fromARGB(255, 120, 169, 140),
+              foregroundColor: Color(0xFF2E609C),
             ),
           ),
         ),
