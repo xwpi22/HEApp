@@ -28,6 +28,9 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineLarge,
             ),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               '遊戲結束',
               textAlign: TextAlign.center,
@@ -153,7 +156,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    backgroundColor: globColor,
+                    backgroundColor: Color(0xFF2E609C),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () async {
@@ -179,7 +182,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    backgroundColor: globColor,
+                    backgroundColor: Color(0xFF2E609C),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () async {

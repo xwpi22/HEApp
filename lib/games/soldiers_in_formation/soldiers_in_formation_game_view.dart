@@ -54,10 +54,10 @@ class _SoldiersInFormationGameState extends State<SoldiersInFormationGame> {
     double gridHeight =
         MediaQuery.of(context).size.height * 0.8; // 60% of screen height
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 255, 240, 219),
+      // backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: const BackButton(color: Colors.black),
-        backgroundColor: Colors.transparent,
+        leading: const BackButton(color: Colors.white),
+        backgroundColor: Color(0xFF2E609C),
         elevation: 0,
       ),
       body: Center(
@@ -96,8 +96,9 @@ class _SoldiersInFormationGameState extends State<SoldiersInFormationGame> {
                 child: Container(
                   decoration: BoxDecoration(
                     color: index <= _lastPressed
-                        ? Colors.red
-                        : Colors.green, // Change color based on click order.
+                        ? Colors.grey
+                        : Color.fromARGB(255, 77, 144,
+                            231), // Change color based on click order.
                     borderRadius:
                         BorderRadius.circular(8), // Rounded corners for buttons
                     boxShadow: [

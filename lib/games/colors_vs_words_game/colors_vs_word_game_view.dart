@@ -131,7 +131,7 @@ class _ColorvsWordGameViewState extends State<ColorvsWordGameView> {
 
     return Scaffold(
       // extendBodyBehindAppBar: true,
-      backgroundColor: const Color.fromARGB(255, 255, 240, 219),
+      // backgroundColor: const Color.fromARGB(255, 255, 240, 219),
       appBar: AppBar(
         leading: const BackButton(color: Colors.black),
         backgroundColor: Colors.transparent,

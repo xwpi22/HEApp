@@ -23,21 +23,22 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              '驗證E-mail',
+              '驗證 E-mail',
               style: TextStyle(
-                color: globColor,
+                color: Color(0xFF2E609C),
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
                 // fontFamily:
               ),
             ),
-            const SizedBox(
+            SizedBox(
               height: uiHight,
             ),
             const Text(
-              "我們已向您發送了E-mail驗證。\n請開啟它並驗證您的E-mail帳戶。\n如果您尚未收到驗證E-mail\n請按下面的重新發送E-mail驗證信\n",
+              "我們已向您發送了 E-mail 驗證信。請開啟它以驗證您的 E-mail 帳戶。\n\n如果您尚未收到，請按下面的重新發送 E-mail 驗證信。",
+              textAlign: TextAlign.justify,
               style: TextStyle(
-                fontSize: 25,
+                fontSize: 24,
               ),
             ),
             const SizedBox(
@@ -48,10 +49,11 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                 await AuthService.firebase().sendEmailVerification();
               },
               child: const Text(
-                '重新發送E-mail驗證信',
+                '重新發送 E-mail 驗證信',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: globColor,
+                  color: Color(0xFF2E609C),
+                  // fontSize: 24,
                 ),
               ),
             ),
@@ -68,7 +70,8 @@ class _VerifyEmailViewState extends State<VerifyEmailView> {
                 '已驗證完畢，重新登入',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
-                  color: globColor,
+                  color: Color(0xFF2E609C),
+                  // fontSize: 24,
                 ),
               ),
             )

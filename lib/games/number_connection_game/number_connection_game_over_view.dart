@@ -25,8 +25,11 @@ class _NCGameOverViewState extends State<NCGameOverView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('遊戲紀錄'),
-        backgroundColor: globColor,
+        title: Text('遊戲紀錄',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Theme.of(context).colorScheme.onSecondary,
+                )),
+        backgroundColor: Color(0xFF2E609C),
         toolbarHeight: 60.h,
       ),
       extendBodyBehindAppBar: false,

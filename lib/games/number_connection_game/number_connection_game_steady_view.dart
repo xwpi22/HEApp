@@ -58,16 +58,34 @@ class _NumberConnectionSteadyViewState
               textScaleFactor: 1.5,
             ),
             const SizedBox(height: sizeboxHeigt),
-            Text(
-              '遊戲規則：\n螢幕上將出現隨機分布的數字\n請從起始數字開始\n將綠色按鈕長按成紅色\n按到結束數字時遊戲結束',
-              style: GoogleFonts.permanentMarker(
-                fontSize: 22.sp,
-                color: Colors.grey.shade700,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.left,
-              textScaleFactor: 1,
-            ),
+            SizedBox(
+                width: 300,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '遊戲規則：',
+                      style: GoogleFonts.permanentMarker(
+                        fontSize: 22.sp,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.left,
+                      textScaleFactor: 1,
+                    ),
+                    const SizedBox(height: sizeboxHeigt),
+                    Text(
+                      '螢幕上將出現隨機分布的數字，請從起始數字開始，將綠色按鈕長按成紅色，按到結束數字時遊戲結束',
+                      style: GoogleFonts.permanentMarker(
+                        fontSize: 20.sp,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.justify,
+                      textScaleFactor: 1,
+                    ),
+                  ],
+                )),
             const SizedBox(height: sizeboxHeigt),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -89,7 +107,7 @@ class _NumberConnectionSteadyViewState
                       textStyle: Theme.of(context).textTheme.labelMedium,
                       selectedTextStyle: TextStyle(
                           fontSize: 20.0.sp,
-                          color: Theme.of(context).primaryColor,
+                          color: Color(0xFF2E609C),
                           fontWeight: FontWeight.bold),
                       minValue: 1,
                       maxValue: 25,
@@ -126,7 +144,7 @@ class _NumberConnectionSteadyViewState
                       textStyle: Theme.of(context).textTheme.labelMedium,
                       selectedTextStyle: TextStyle(
                           fontSize: 20.0.sp,
-                          color: Theme.of(context).primaryColor,
+                          color: Color(0xFF2E609C),
                           fontWeight: FontWeight.bold),
                       onChanged: (value) =>
                           setState(() => _endingNumber = value),
@@ -147,8 +165,8 @@ class _NumberConnectionSteadyViewState
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                maximumSize: Size(140.w, 120.h),
-                minimumSize: Size(120.w, 100.h),
+                maximumSize: Size(140.w, 80.h),
+                minimumSize: Size(120.w, 60.h),
                 shape: const RoundedRectangleBorder(
                   side: BorderSide(
                     color: Colors.white,
@@ -176,7 +194,7 @@ class _NumberConnectionSteadyViewState
                 style: GoogleFonts.permanentMarker(
                   fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
-                  color: globColor,
+                  color: Color(0xFF2E609C),
                 ),
                 textScaleFactor: 1,
               ),

@@ -18,7 +18,7 @@ class NumberConnectionReadyView extends StatefulWidget {
 class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
   @override
   Widget build(BuildContext context) {
-    const double sizeboxHeigt = 20.0;
+    const double sizeboxHeigt = 30.0;
 
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -56,8 +56,8 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                 Text(
                   '普通模式：',
                   style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: globColor,
+                    fontSize: 24.sp,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   // textAlign: TextAlign.left,
@@ -67,18 +67,18 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                   '僅出現數字',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   // textAlign: TextAlign.left,
                   textScaleFactor: 1,
                 ),
-                const SizedBox(height: sizeboxHeigt),
+                const SizedBox(height: 10),
                 Text(
                   '進階模式：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   // textAlign: TextAlign.left,
@@ -88,7 +88,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                   '英文字母來搗亂！別被騙了！',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   // textAlign: TextAlign.left,
@@ -112,8 +112,8 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 120.h),
-                    minimumSize: Size(120.w, 100.h),
+                    maximumSize: Size(140.w, 100.h),
+                    minimumSize: Size(120.w, 80.h),
                     // backgroundColor: const Color.fromARGB(255, 27, 97, 149),
                     backgroundColor: Colors.white,
                     shape: const RoundedRectangleBorder(
@@ -136,7 +136,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),
@@ -144,8 +144,8 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                 const SizedBox(width: 20.0),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 120.h),
-                    minimumSize: Size(120.w, 100.h),
+                    maximumSize: Size(140.w, 100.h),
+                    minimumSize: Size(120.w, 80.h),
                     backgroundColor: Colors.white,
                     shape: const RoundedRectangleBorder(
                       side: BorderSide(
@@ -167,7 +167,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),

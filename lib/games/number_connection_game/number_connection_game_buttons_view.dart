@@ -60,7 +60,7 @@ class _WrapperButtonState extends State<WrapperButton> {
           // alignment: const Alignment(0.0, 0.0),
           shape: const CircleBorder(),
           padding: const EdgeInsets.all(10.0),
-          backgroundColor: _pressedFlag ? Colors.red : Colors.green,
+          backgroundColor: _pressedFlag ? Colors.red : Color(0xFF2E609C),
           foregroundColor: Colors.white,
           shadowColor: const Color.fromARGB(247, 186, 184, 184),
           textStyle: const TextStyle(
@@ -74,7 +74,7 @@ class _WrapperButtonState extends State<WrapperButton> {
                   color: Colors.red,
                 )
               : const BorderSide(
-                  color: Colors.green,
+                  color: Colors.white,
                 ),
 
           maximumSize: const Size(100, 100),

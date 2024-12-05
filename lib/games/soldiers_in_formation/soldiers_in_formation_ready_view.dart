@@ -57,7 +57,7 @@ class _SoldiersInFormationGameReadyViewState
                   '遊戲玩法：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
@@ -67,7 +67,7 @@ class _SoldiersInFormationGameReadyViewState
                   '請快速的依照由左至右\n由上而下的順序',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
@@ -116,7 +116,7 @@ class _SoldiersInFormationGameReadyViewState
                 style: GoogleFonts.permanentMarker(
                   fontSize: 27.sp,
                   fontWeight: FontWeight.bold,
-                  color: globColor,
+                  color: Color(0xFF2E609C),
                 ),
               ),
             ),
