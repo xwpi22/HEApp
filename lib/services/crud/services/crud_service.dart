@@ -7,7 +7,7 @@ import 'package:heapp/services/crud/models/users_and_records.dart';
 import 'package:heapp/services/crud/sqlite/crud_exceptions.dart';
 
 class Services {
-  static const endpoint = "http://13.236.164.131:8090";
+  static const endpoint = "XXXX";
   static const userApi = "$endpoint/patient";
   static const recordApi = "$endpoint/record";
 
