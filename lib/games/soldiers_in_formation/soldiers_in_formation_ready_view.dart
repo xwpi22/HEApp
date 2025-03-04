@@ -67,7 +67,7 @@ class _SoldiersInFormationGameReadyViewState
                   '請快速的依照由左至右\n由上而下的順序',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,

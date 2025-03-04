@@ -141,7 +141,7 @@ class _CWEndingRecordViewState extends State<CWEndingRecordView> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    backgroundColor: globColor,
+                    backgroundColor: Color(0xFF2E609C),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () async {
@@ -161,12 +161,12 @@ class _CWEndingRecordViewState extends State<CWEndingRecordView> {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 100.h),
+                    maximumSize: Size(140.w, 80.h),
                     minimumSize: Size(120.w, 80.h),
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    backgroundColor: globColor,
+                    backgroundColor: Color(0xFF2E609C),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () async {

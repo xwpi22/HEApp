@@ -138,10 +138,10 @@ class _NumberConnectionGameViewState extends State<NumberConnectionGameView> {
     return Center(
       child: Scaffold(
         // extendBodyBehindAppBar: true,
-        backgroundColor: const Color.fromARGB(255, 255, 240, 219),
+        // backgroundColor: Colors.white,
         appBar: AppBar(
-          leading: const BackButton(color: Colors.black),
-          backgroundColor: Colors.transparent,
+          leading: const BackButton(color: Colors.white),
+          backgroundColor: Color(0xFF2E609C),
           elevation: 0,
         ),
         extendBody: false,

@@ -69,9 +69,8 @@ class _RegisterViewState extends State<RegisterView> {
             ),
             // This will change the background color of the header and selected date
             colorScheme: const ColorScheme.light(
-              primary:
-                  Color.fromARGB(255, 120, 169, 140), // header background color
-              onPrimary: Colors.black, // header text color
+              primary: Color(0xFF2E609C), // header background color
+              onPrimary: Colors.white, // header text color (chosen text color)
               onSurface: Colors.black, // body text color
             ),
             datePickerTheme: const DatePickerThemeData(
@@ -305,7 +304,7 @@ class _RegisterViewState extends State<RegisterView> {
                     '註冊',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                   ),
                 ),
@@ -318,7 +317,7 @@ class _RegisterViewState extends State<RegisterView> {
                     '已經註冊，點擊此處登入！',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                   ),
                 )

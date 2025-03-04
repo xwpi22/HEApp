@@ -66,11 +66,14 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                   '根據字體的顏色選出答案',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
                   textScaleFactor: 1,
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Text(
                   '字的意義模式：',
@@ -86,11 +89,14 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                   '根據字義代表的顏色選出答案',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
                   textScaleFactor: 1,
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Text(
                   '混合出題模式：',
@@ -106,7 +112,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                   '兩種模式隨機出題',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: Colors.grey.shade700,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,

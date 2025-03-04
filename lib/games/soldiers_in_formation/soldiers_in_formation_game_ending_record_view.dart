@@ -29,6 +29,9 @@ class _SIFEndingRecordViewState extends State<SIFEndingRecordView> {
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineLarge,
             ),
+            SizedBox(
+              height: 10,
+            ),
             Text(
               '遊戲結束',
               textAlign: TextAlign.center,
@@ -142,7 +145,7 @@ class _SIFEndingRecordViewState extends State<SIFEndingRecordView> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    backgroundColor: globColor,
+                    backgroundColor: Color(0xFF2E609C),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () async {
@@ -167,7 +170,7 @@ class _SIFEndingRecordViewState extends State<SIFEndingRecordView> {
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
                     ),
-                    backgroundColor: globColor,
+                    backgroundColor: Color(0xFF2E609C),
                     foregroundColor: Colors.white,
                   ),
                   onPressed: () async {

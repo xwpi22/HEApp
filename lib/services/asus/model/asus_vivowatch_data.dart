@@ -15,11 +15,11 @@ class ASUSVivowatchData {
 
   factory ASUSVivowatchData.fromJson(Map<String, dynamic> json) {
     return ASUSVivowatchData(
-      deviceId: json['deviceId'],
-      latestHb: json['latestHb'],
-      latestBp: json['latestBp'],
-      latestSpO2: json['latestSpO2'],
-      latestStep: json['latestStep'],
+      deviceId: json['deviceId'] ?? '',
+      latestHb: json['latestHb'] ?? {},
+      latestBp: json['latestBp'] ?? {},
+      latestSpO2: json['latestSpO2'] ?? {},
+      latestStep: json['latestStep'] ?? {},
     );
   }
 }
