@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
             seedColor: Color(0xFF2E609C),
           ),
           // primarySwatch: Colors.white,
-          primaryColor: Colors.white,
+          primaryColor: Colors.grey,
           secondaryHeaderColor: Colors.white,
           textTheme: TextTheme(
             displayLarge: TextStyle(

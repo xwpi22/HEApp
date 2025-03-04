@@ -171,7 +171,7 @@ class _NumberConnectionSteadyViewState
                   side: BorderSide(
                     color: Colors.white,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
               ),
               onPressed: () async {
