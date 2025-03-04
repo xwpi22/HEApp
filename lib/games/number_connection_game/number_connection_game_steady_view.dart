@@ -147,13 +147,13 @@ class _NumberConnectionSteadyViewState
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                maximumSize: Size(140.w, 120.h),
-                minimumSize: Size(120.w, 100.h),
+                maximumSize: Size(140.w, 80.h),
+                minimumSize: Size(120.w, 60.h),
                 shape: const RoundedRectangleBorder(
                   side: BorderSide(
                     color: Colors.white,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(30)),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
               ),
               onPressed: () async {
@@ -176,7 +176,7 @@ class _NumberConnectionSteadyViewState
                 style: GoogleFonts.permanentMarker(
                   fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
-                  color: globColor,
+                  color: Color(0xFF2E609C),
                 ),
                 textScaleFactor: 1,
               ),

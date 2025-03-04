@@ -57,7 +57,7 @@ class _SoldiersInFormationGameReadyViewState
                   '遊戲玩法：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
@@ -103,7 +103,7 @@ class _SoldiersInFormationGameReadyViewState
                     color: Colors.white,
                     width: 1.5,
                   ),
-                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
                 ),
               ),
               onPressed: () async {
@@ -111,12 +111,12 @@ class _SoldiersInFormationGameReadyViewState
                     builder: (context) => const SoldiersInFormationGame()));
               },
               child: Text(
-                '遊戲開始',
+                '開始遊戲',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.permanentMarker(
-                  fontSize: 27.sp,
+                  fontSize: 25.sp,
                   fontWeight: FontWeight.bold,
-                  color: globColor,
+                  color: Color(0xFF2E609C),
                 ),
               ),
             ),

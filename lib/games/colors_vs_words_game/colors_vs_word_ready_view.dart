@@ -56,7 +56,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                   '字的顏色模式：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
@@ -76,7 +76,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                   '字的意義模式：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
@@ -96,7 +96,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                   '混合出題模式：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   textAlign: TextAlign.left,
@@ -152,7 +152,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),
@@ -182,7 +182,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),
@@ -212,7 +212,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),

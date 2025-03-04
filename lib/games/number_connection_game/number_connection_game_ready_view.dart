@@ -57,7 +57,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                   '普通模式：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   // textAlign: TextAlign.left,
@@ -78,7 +78,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                   '進階模式：',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
-                    color: globColor,
+                    color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
                   // textAlign: TextAlign.left,
@@ -136,7 +136,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),
@@ -167,7 +167,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                     style: GoogleFonts.permanentMarker(
                       fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
-                      color: globColor,
+                      color: Color(0xFF2E609C),
                     ),
                     textScaleFactor: 1,
                   ),

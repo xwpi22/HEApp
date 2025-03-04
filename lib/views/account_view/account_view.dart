@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
+import 'package:image/image.dart' as img;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:heapp/constants/routes.dart';
@@ -40,12 +41,29 @@ class _AccountViewState extends State<AccountView> {
   }
 
   Future<void> _pickImage() async {
-    final XFile? pickedFile =
-        await _picker.pickImage(source: ImageSource.gallery);
+    final XFile? pickedFile = await _picker.pickImage(
+      source: ImageSource.gallery,
+      maxHeight: 30.h,
+      maxWidth: 30.h,
+      imageQuality: 85,
+    );
     if (pickedFile != null) {
-      setState(() {
-        _imageFile = File(pickedFile.path);
-      });
+      // Load the image with the `image` package
+      final imageBytes = File(pickedFile.path).readAsBytesSync();
+      img.Image? image = img.decodeImage(imageBytes);
+      if (image != null) {
+        // Re-encode to reduce color space issues
+        final convertedBytes = img.encodeJpg(image, quality: 85);
+
+        // Save the converted image to a new file
+        final convertedFile = File('${pickedFile.path}_sRGB.jpg');
+        await convertedFile.writeAsBytes(convertedBytes);
+
+        setState(() {
+          _imageFile = convertedFile;
+          // _imageFile = File(pickedFile.path);
+        });
+      }
     }
   }
 
