@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:heapp/services/asus/model/asus_vivowatch_data.dart';
 
 class ASUSVivowatchService {
-  static const endpoint = "XXXX";
+  static const endpoint = "http://13.236.164.131/api/v1/asus";
   static const getData = "$endpoint/getASUSLatestData.php";
   var httpClient = http.Client();
 
