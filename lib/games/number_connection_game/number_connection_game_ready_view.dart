@@ -56,11 +56,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                 Text(
                   '普通模式：',
                   style: GoogleFonts.permanentMarker(
-<<<<<<< HEAD
-                    fontSize: 22.sp,
-=======
                     fontSize: 24.sp,
->>>>>>> 4bf5d646f3ef1f1eebd4291ca662f92989237978
                     color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
