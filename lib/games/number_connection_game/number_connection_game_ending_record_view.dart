@@ -166,7 +166,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                     );
                   },
                   child: const Text(
-                    '遊戲選單',
+                    '遊戲\n選單',
                     // style: GoogleFonts.permanentMarker(fontSize: 18),
                     style: TextStyle(fontSize: 28),
                   ),
@@ -192,7 +192,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                     );
                   },
                   child: const Text(
-                    '再來一次',
+                    '再來\n一次',
                     // style: GoogleFonts.permanentMarker(fontSize: 18),
                     style: TextStyle(fontSize: 28),
                   ),
