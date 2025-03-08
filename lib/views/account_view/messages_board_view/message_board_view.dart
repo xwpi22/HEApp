@@ -71,10 +71,6 @@ class _MessageBoardViewState extends State<MessageBoardView> {
         backgroundColor: Color(0xFF2E609C),
         title: Text(
           "留言板",
-          style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onPrimary,
-                fontSize: 20.h,
-              ),
         ),
         toolbarHeight: 60.h,
         iconTheme: IconThemeData(

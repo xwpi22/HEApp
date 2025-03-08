@@ -64,10 +64,6 @@ class _ASUSVivoWatchDataViewState extends State<ASUSVivoWatchDataView> {
         backgroundColor: Color(0xFF2E609C),
         title: Text(
           'ASUS VivoWatch 生理數據',
-          style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onPrimary,
-                fontSize: 20.h,
-              ),
         ),
         toolbarHeight: 60.h,
         actions: <Widget>[
