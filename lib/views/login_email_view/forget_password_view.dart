@@ -19,8 +19,6 @@ class _ForgetPassViewState extends State<ForgetPassView> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('忘記密碼'),
-        backgroundColor: globColor,
-        toolbarHeight: 60.h,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -32,14 +30,14 @@ class _ForgetPassViewState extends State<ForgetPassView> {
               controller: _emailController,
               keyboardType: TextInputType.emailAddress,
               style: Theme.of(context).textTheme.bodySmall,
-              decoration: const InputDecoration(
-                labelText: '請輸入您的e-mail',
+              decoration: InputDecoration(
+                hintText: '請輸入您的e-mail',
+                hintStyle: Theme.of(context).textTheme.bodySmall,
                 icon: Icon(Icons.email),
               ),
             ),
             SizedBox(height: 20.h),
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(backgroundColor: globColor),
+            TextButton(
               onPressed: _isLoading ? null : _resetPassword,
               child: _isLoading
                   ? const CircularProgressIndicator()

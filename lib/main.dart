@@ -29,6 +29,8 @@ void main() {
   runApp(const MyApp());
 }
 
+const Color appBarBackgroundColor = Color(0xFF2E609C);
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -45,6 +47,16 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
             seedColor: Color(0xFF2E609C),
+          ),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Color(0xFF2E609C),
+            toolbarHeight: 60.h,
+            titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  // Use textTheme here
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSecondary, // Ensure visibility
+                ),
           ),
           // primarySwatch: Colors.white,
           primaryColor: Colors.grey,

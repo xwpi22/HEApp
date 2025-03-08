@@ -1,3 +1,5 @@
+// import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
+
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:image/image.dart' as img;
@@ -74,10 +76,8 @@ class _AccountViewState extends State<AccountView> {
         appBar: AppBar(
           title: Text('會員專區',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Colors.white,
                   )),
-          backgroundColor: Color(0xFF2E609C),
-          toolbarHeight: 60.h,
           actions: <Widget>[
             IconButton.outlined(
               onPressed: () async {
