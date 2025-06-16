@@ -28,6 +28,14 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
         iconTheme: IconThemeData(
           color: Colors.white, // Set the desired color for the back icon here
         ),
+        leading: BackButton(
+          onPressed: () async {
+            Navigator.of(context).pushNamedAndRemoveUntil(
+              gameListRoute,
+              (_) => false,
+            );
+          },
+        ),
       ),
       body: Center(
         child: Column(

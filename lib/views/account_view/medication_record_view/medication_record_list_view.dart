@@ -51,7 +51,7 @@ class _MedicationListViewState extends State<MedicationListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Text('每日用藥',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(

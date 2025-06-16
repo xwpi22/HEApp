@@ -146,7 +146,7 @@ class _CWEndingRecordViewState extends State<CWEndingRecordView> {
                   ),
                   onPressed: () async {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      homeRoute,
+                      gameListRoute,
                       (_) => false,
                     );
                   },
