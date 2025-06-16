@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:heapp/views/account_view/medication_record_view/medication_record_list_view.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:heapp/services/crud/models/users_and_records.dart';
 import 'package:heapp/views/account_view/account_view.dart';
@@ -30,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(MdiIcons.controller), label: '遊戲'),
-          BottomNavigationBarItem(icon: Icon(MdiIcons.podium), label: '我的遊戲紀錄'),
+          BottomNavigationBarItem(icon: Icon(MdiIcons.pill), label: '每日用藥'),
           BottomNavigationBarItem(
               icon: Icon(MdiIcons.faceAgent), label: '會員專區'),
         ],
