@@ -150,7 +150,7 @@ class _SIFEndingRecordViewState extends State<SIFEndingRecordView> {
                   ),
                   onPressed: () async {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      homeRoute,
+                      gameListRoute,
                       (_) => false,
                     );
                   },

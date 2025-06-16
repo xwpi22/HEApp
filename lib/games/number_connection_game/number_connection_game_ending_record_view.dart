@@ -161,7 +161,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                   ),
                   onPressed: () async {
                     Navigator.of(context).pushNamedAndRemoveUntil(
-                      homeRoute,
+                      gameListRoute,
                       (_) => false,
                     );
                   },

@@ -18,6 +18,16 @@ class _GamesHomeViewState extends State<GamesHomeView> {
       // extendBodyBehindAppBar: true,
       // floatingActionButton: Icon(Icons.arrow_back),
       appBar: AppBar(
+        leading: IconButton(
+            onPressed: () async {
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                homeRoute,
+                (_) => false,
+              );
+            },
+            icon: const Icon(
+              Icons.home_filled,
+            )),
         backgroundColor: Color(0xFF2E609C),
         iconTheme: IconThemeData(
           color: Colors.white, // Set the desired color for the back icon here
