@@ -50,6 +50,8 @@ class MyApp extends StatelessWidget {
           ),
           appBarTheme: AppBarTheme(
             backgroundColor: Color(0xFF2E609C),
+            surfaceTintColor: Colors.transparent,
+            // set surfaceTintColor to disable recoloring the AppBar while scrolling the number picker
             toolbarHeight: 60.h,
             titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
                   // Use textTheme here

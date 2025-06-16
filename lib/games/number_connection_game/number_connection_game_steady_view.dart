@@ -71,7 +71,6 @@ class _NumberConnectionSteadyViewState
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.left,
-                      textScaleFactor: 1,
                     ),
                     const SizedBox(height: sizeboxHeigt),
                     Text(
@@ -82,7 +81,6 @@ class _NumberConnectionSteadyViewState
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.justify,
-                      textScaleFactor: 1,
                     ),
                   ],
                 )),
