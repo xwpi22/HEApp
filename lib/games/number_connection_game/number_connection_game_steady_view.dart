@@ -37,16 +37,17 @@ class _NumberConnectionSteadyViewState
 
   @override
   Widget build(BuildContext context) {
-    const double sizeboxWidth = 50.0;
+    const double sizeboxWidth = 20.0;
     const double sizeboxHeigt = 20.0;
     int maxEndingNumber = _startingNumber + 24;
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       // floatingActionButton: Icon(Icons.arrow_back),
       appBar: AppBar(
-        leading: const BackButton(color: Colors.black),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Color(0xFF2E609C),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
       ),
       body: Center(
         child: Column(
@@ -71,7 +72,6 @@ class _NumberConnectionSteadyViewState
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.left,
-                      textScaleFactor: 1,
                     ),
                     const SizedBox(height: sizeboxHeigt),
                     Text(
@@ -82,7 +82,6 @@ class _NumberConnectionSteadyViewState
                         fontWeight: FontWeight.bold,
                       ),
                       textAlign: TextAlign.justify,
-                      textScaleFactor: 1,
                     ),
                   ],
                 )),

@@ -59,7 +59,7 @@ class _WrapperButtonState extends State<WrapperButton> {
         style: ElevatedButton.styleFrom(
           // alignment: const Alignment(0.0, 0.0),
           shape: const CircleBorder(),
-          padding: const EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(30.0),
           backgroundColor: _pressedFlag ? Colors.red : Color(0xFF2E609C),
           foregroundColor: Colors.white,
           shadowColor: const Color.fromARGB(247, 186, 184, 184),

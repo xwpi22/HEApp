@@ -19,29 +19,20 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
   @override
   Widget build(BuildContext context) {
     const double sizeboxHeigt = 20.0;
-    const double sizeboxWidth = 20.0;
+    const double sizeboxWidth = 10.0;
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () async {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                homeRoute,
-                (_) => false,
-              );
-            },
-            icon: const Icon(
-              Icons.home_filled,
-              color: Colors.black,
-            )),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Color(0xFF2E609C),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          // crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               '五顏配六色',
@@ -49,76 +40,78 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
               textScaleFactor: 1.5,
             ),
             const SizedBox(height: sizeboxHeigt),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  '字的顏色模式：',
-                  style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: Color(0xFF2E609C),
-                    fontWeight: FontWeight.bold,
+            SizedBox(
+              // width: 330,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '字的顏色模式：',
+                    style: GoogleFonts.permanentMarker(
+                      fontSize: 22.sp,
+                      color: Color(0xFF2E609C),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.left,
+                    textScaleFactor: 1,
                   ),
-                  textAlign: TextAlign.left,
-                  textScaleFactor: 1,
-                ),
-                Text(
-                  '根據字體的顏色選出答案',
-                  style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
+                  Text(
+                    '根據字體的顏色選出答案',
+                    style: GoogleFonts.permanentMarker(
+                      fontSize: 22.sp,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.left,
+                    textScaleFactor: 1,
                   ),
-                  textAlign: TextAlign.left,
-                  textScaleFactor: 1,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  '字的意義模式：',
-                  style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: Color(0xFF2E609C),
-                    fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 10,
                   ),
-                  textAlign: TextAlign.left,
-                  textScaleFactor: 1,
-                ),
-                Text(
-                  '根據字義代表的顏色選出答案',
-                  style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
+                  Text(
+                    '字的意義模式：',
+                    style: GoogleFonts.permanentMarker(
+                      fontSize: 22.sp,
+                      color: Color(0xFF2E609C),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.left,
                   ),
-                  textAlign: TextAlign.left,
-                  textScaleFactor: 1,
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  '混合出題模式：',
-                  style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: Color(0xFF2E609C),
-                    fontWeight: FontWeight.bold,
+                  Text(
+                    '根據字義代表的顏色選出答案',
+                    style: GoogleFonts.permanentMarker(
+                      fontSize: 22.sp,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.left,
+                    textScaleFactor: 1,
                   ),
-                  textAlign: TextAlign.left,
-                  textScaleFactor: 1,
-                ),
-                Text(
-                  '兩種模式隨機出題',
-                  style: GoogleFonts.permanentMarker(
-                    fontSize: 22.sp,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.bold,
+                  SizedBox(
+                    height: 10,
                   ),
-                  textAlign: TextAlign.left,
-                  textScaleFactor: 1,
-                ),
-              ],
+                  Text(
+                    '混合出題模式：',
+                    style: GoogleFonts.permanentMarker(
+                      fontSize: 22.sp,
+                      color: Color(0xFF2E609C),
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.left,
+                    textScaleFactor: 1,
+                  ),
+                  Text(
+                    '兩種模式隨機出題',
+                    style: GoogleFonts.permanentMarker(
+                      fontSize: 22.sp,
+                      color: Colors.grey,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    textAlign: TextAlign.left,
+                    textScaleFactor: 1,
+                  ),
+                ],
+              ),
             ),
             const SizedBox(height: sizeboxHeigt),
             Text(
@@ -126,6 +119,7 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
               style: GoogleFonts.permanentMarker(
                 fontSize: 36.sp,
                 fontWeight: FontWeight.bold,
+                color: Colors.grey.shade800,
               ),
               textScaleFactor: 1,
             ),

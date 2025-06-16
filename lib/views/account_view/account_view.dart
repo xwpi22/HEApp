@@ -1,3 +1,5 @@
+// import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
+
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:image/image.dart' as img;
@@ -74,10 +76,11 @@ class _AccountViewState extends State<AccountView> {
         appBar: AppBar(
           title: Text('會員專區',
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                    color: Theme.of(context).colorScheme.onSecondary,
+                    color: Colors.white,
                   )),
-          backgroundColor: Color(0xFF2E609C),
-          toolbarHeight: 60.h,
+          iconTheme: IconThemeData(
+            color: Colors.white, // Set the desired color for the back icon here
+          ),
           actions: <Widget>[
             IconButton.outlined(
               onPressed: () async {
@@ -244,39 +247,6 @@ class _AccountViewState extends State<AccountView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              maximumSize: Size(120.w, 120.h),
-                              minimumSize: Size(100.w, 80.h),
-                              // backgroundColor: const Color.fromARGB(255, 27, 97, 149),
-                              backgroundColor: Colors.white,
-                              shape: const RoundedRectangleBorder(
-                                side: BorderSide(
-                                  color: Colors.white,
-                                  width: 1.5,
-                                ),
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(20)),
-                              ),
-                              // padding: EdgeInsets.all(20),
-                            ),
-                            onPressed: () async {
-                              Navigator.of(context).push(MaterialPageRoute(
-                                  builder: (context) =>
-                                      MedicationListView(userId: user.id)));
-                            },
-                            child: Text(
-                              '每日\n用藥',
-                              style: TextStyle(
-                                fontSize: 27.sp,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF2E609C),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 10.0,
-                          ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               maximumSize: Size(120.w, 120.h),

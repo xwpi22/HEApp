@@ -22,22 +22,13 @@ class _SoldiersInFormationGameReadyViewState
     const double sizeboxHeigt = 20.0;
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       // floatingActionButton: Icon(Icons.arrow_back),
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () async {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                homeRoute,
-                (_) => false,
-              );
-            },
-            icon: const Icon(
-              Icons.home_filled,
-              color: Colors.black,
-            )),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Color(0xFF2E609C),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
       ),
       body: Center(
         child: Column(
@@ -74,7 +65,7 @@ class _SoldiersInFormationGameReadyViewState
                   textScaleFactor: 1,
                 ),
                 Text(
-                  '將綠色按鈕點擊成紅色',
+                  '將藍色按鈕點擊成灰色',
                   style: GoogleFonts.permanentMarker(
                     fontSize: 22.sp,
                     color: Colors.grey.shade700,
@@ -85,12 +76,12 @@ class _SoldiersInFormationGameReadyViewState
                 ),
               ],
             ),
-            const SizedBox(height: sizeboxHeigt * 1.5),
+            const SizedBox(height: sizeboxHeigt),
             Image.asset(
-              'assets/images/SIFGameRule.JPG',
+              'assets/images/SIFGameRule.png',
               width: 250.w,
               height: 125.h,
-              fit: BoxFit.cover, // Adjust according to your requirement
+              fit: BoxFit.contain, // Adjust according to your requirement
             ),
             const SizedBox(height: sizeboxHeigt * 1.5),
             ElevatedButton(

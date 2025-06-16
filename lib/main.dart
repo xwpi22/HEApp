@@ -13,6 +13,8 @@ import 'package:heapp/games/soldiers_in_formation/soldiers_in_formation_game_end
 import 'package:heapp/games/soldiers_in_formation/soldiers_in_formation_ready_view.dart';
 import 'package:heapp/services/auth/auth_service.dart';
 import 'package:heapp/views/account_view/account_view.dart';
+import 'package:heapp/views/account_view/medication_record_view/medication_record_list_view.dart';
+import 'package:heapp/views/game_home_view/games_home_view.dart';
 import 'package:heapp/views/login_email_view/forget_password_view.dart';
 import 'package:heapp/views/login_email_view/home_view.dart';
 import 'package:heapp/views/login_email_view/login_view.dart';
@@ -28,6 +30,8 @@ void main() {
   ]);
   runApp(const MyApp());
 }
+
+const Color appBarBackgroundColor = Color(0xFF2E609C);
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -45,6 +49,18 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
             seedColor: Color(0xFF2E609C),
+          ),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Color(0xFF2E609C),
+            surfaceTintColor: Colors.transparent,
+            // set surfaceTintColor to disable recoloring the AppBar while scrolling the number picker
+            toolbarHeight: 60.h,
+            titleTextStyle: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  // Use textTheme here
+                  color: Theme.of(context)
+                      .colorScheme
+                      .onSecondary, // Ensure visibility
+                ),
           ),
           // primarySwatch: Colors.white,
           primaryColor: Colors.grey,
@@ -109,6 +125,7 @@ class MyApp extends StatelessWidget {
           soldiersInFormationGameReadyRoute: (context) =>
               const SoldiersInFormationGameReadyView(),
           homeRoute: (context) => const HomeView(),
+          gameListRoute: (context) => const GamesHomeView(),
           loginRoute: (context) => const LoginView(),
           registerRoute: (context) => const RegisterView(),
           accountRoute: (context) => const AccountView(),
@@ -118,6 +135,15 @@ class MyApp extends StatelessWidget {
           cwgameoverRoute: (context) => const CWGameOverView(),
           sifgameoverRoute: (context) => const SIFGameOverView(),
           forgotPasswordRoute: (context) => const ForgetPassView(),
+        },
+        onGenerateRoute: (settings) {
+          switch (settings.name) {
+            case medicationRoute:
+              final userId = settings.arguments as String;
+              return MaterialPageRoute(
+                builder: (context) => MedicationListView(userId: userId),
+              );
+          }
         },
       ),
     );
