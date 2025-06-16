@@ -51,16 +51,13 @@ class _MedicationListViewState extends State<MedicationListView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
+        title: Text('每日用藥',
+            style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                  color: Colors.white,
+                )),
         backgroundColor: Color(0xFF2E609C),
-        title: Text(
-          '每日用藥',
-          style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                color: Theme.of(context).colorScheme.onPrimary,
-                fontSize: 20.h,
-              ),
-        ),
-        toolbarHeight: 60.h,
         iconTheme: IconThemeData(
           color: Colors.white, // Set the desired color for the back icon here
         ),

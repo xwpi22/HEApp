@@ -62,10 +62,13 @@ class _ASUSVivoWatchDataViewState extends State<ASUSVivoWatchDataView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF2E609C),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
         title: Text(
           'ASUS VivoWatch 生理數據',
         ),
-        toolbarHeight: 60.h,
+        // toolbarHeight: 60.h,
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.restart_alt),

@@ -15,8 +15,14 @@ class _GamesHomeViewState extends State<GamesHomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       // floatingActionButton: Icon(Icons.arrow_back),
+      appBar: AppBar(
+        backgroundColor: Color(0xFF2E609C),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -21,23 +21,29 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
     const double sizeboxHeigt = 30.0;
 
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      // extendBodyBehindAppBar: true,
       // floatingActionButton: Icon(Icons.arrow_back),
       appBar: AppBar(
-        leading: IconButton(
-            onPressed: () async {
-              Navigator.of(context).pushNamedAndRemoveUntil(
-                homeRoute,
-                (_) => false,
-              );
-            },
-            icon: const Icon(
-              Icons.home_filled,
-              color: Colors.black,
-            )),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
+        backgroundColor: Color(0xFF2E609C),
+        iconTheme: IconThemeData(
+          color: Colors.white, // Set the desired color for the back icon here
+        ),
       ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //       onPressed: () async {
+      //         Navigator.of(context).pushNamedAndRemoveUntil(
+      //           homeRoute,
+      //           (_) => false,
+      //         );
+      //       },
+      //       icon: const Icon(
+      //         Icons.home_filled,
+      //         color: Colors.black,
+      //       )),
+      //   backgroundColor: Colors.transparent,
+      //   elevation: 0,
+      // ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -56,7 +62,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                 Text(
                   '普通模式：',
                   style: GoogleFonts.permanentMarker(
-                    fontSize: 24.sp,
+                    fontSize: 22.sp,
                     color: Color(0xFF2E609C),
                     fontWeight: FontWeight.bold,
                   ),
