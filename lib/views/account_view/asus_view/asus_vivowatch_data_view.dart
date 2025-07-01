@@ -44,13 +44,13 @@ class _ASUSVivoWatchDataViewState extends State<ASUSVivoWatchDataView> {
             '未綁定Asus VivoWatch',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Theme.of(context).colorScheme.onPrimary,
-                  fontSize: 20.h,
+                  fontSize: 20.sp,
                 ),
           ),
           toolbarHeight: 60.h,
-          iconTheme: IconThemeData(
-            color: Colors.white, // Set the desired color for the back icon here
-          ),
+          // iconTheme: IconThemeData(
+          //   color: Colors.white, // Set the desired color for the back icon here
+          // ),
         ),
         body: const Center(
             child: Text(
@@ -62,9 +62,9 @@ class _ASUSVivoWatchDataViewState extends State<ASUSVivoWatchDataView> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFF2E609C),
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white, // Set the desired color for the back icon here
+        // ),
         title: Text(
           'ASUS VivoWatch 生理數據',
         ),

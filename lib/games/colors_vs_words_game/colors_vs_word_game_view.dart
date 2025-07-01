@@ -153,7 +153,7 @@ class _ColorvsWordGameViewState extends State<ColorvsWordGameView> {
                     color: Colors.blueGrey[100],
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(
-                      width: 3.0,
+                      width: 3.0.w,
                     ),
                   ),
                   child: Column(
@@ -178,7 +178,7 @@ class _ColorvsWordGameViewState extends State<ColorvsWordGameView> {
                                   color: Colors.blueGrey[900],
                                   borderRadius: BorderRadius.circular(10.0),
                                   border: Border.all(
-                                    width: 2.0,
+                                    width: 2.0.w,
                                   ),
                                 ),
                                 child: Text(

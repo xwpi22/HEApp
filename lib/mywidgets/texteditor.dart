@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class TextEditorWidget extends StatefulWidget {
   String text;
@@ -54,9 +55,9 @@ class _TextEditorWidgetState extends State<TextEditorWidget> {
             },
             child: Text(
               initialText,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.black,
-                fontSize: 18.0,
+                fontSize: 18.0.sp,
               ),
             ));
   }

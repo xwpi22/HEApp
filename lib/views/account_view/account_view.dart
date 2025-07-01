@@ -78,9 +78,9 @@ class _AccountViewState extends State<AccountView> {
               style: Theme.of(context).textTheme.titleLarge!.copyWith(
                     color: Colors.white,
                   )),
-          iconTheme: IconThemeData(
-            color: Colors.white, // Set the desired color for the back icon here
-          ),
+          // iconTheme: IconThemeData(
+          //   color: Colors.white, // Set the desired color for the back icon here
+          // ),
           actions: <Widget>[
             IconButton.outlined(
               onPressed: () async {
@@ -174,7 +174,7 @@ class _AccountViewState extends State<AccountView> {
                           ),
                         ],
                       ),
-                      const SizedBox(height: 20), // Space between rows
+                      SizedBox(height: 20.h), // Space between rows
                       TextFormField(
                         enableInteractiveSelection: false,
                         initialValue: user.email,
@@ -241,8 +241,8 @@ class _AccountViewState extends State<AccountView> {
                               globFontColor, // Adjust the font size as needed
                         ),
                       ),
-                      const SizedBox(
-                        height: 30,
+                      SizedBox(
+                        height: 30.h,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,

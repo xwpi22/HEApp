@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:heapp/games/colors_vs_words_game/colors_vs_word_game_ending_record_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 typedef DialogOptionBuilder<T> = Map<String, T?> Function();
 
@@ -15,25 +17,25 @@ Future<T?> showGenericDialog<T>({
       return AlertDialog(
         title: Text(
           title,
-          style: const TextStyle(fontSize: 30),
+          style: TextStyle(fontSize: 30.sp),
         ),
         content: Text(content),
-        actions: options.keys.map((optionTitle) {
-          final value = options[optionTitle];
-          return TextButton(
-            onPressed: () {
-              if (value != null) {
-                Navigator.of(context).pop(value);
-              } else {
-                Navigator.of(context).pop();
-              }
-            },
-            child: Text(
-              optionTitle,
-              style: const TextStyle(fontSize: 20),
-            ),
-          );
-        }).toList(),
+        actions: [
+          Wrap(
+            alignment: WrapAlignment.end,
+            spacing: 12.w,
+            runSpacing: 8.h,
+            children: options.entries.map((entry) {
+              return TextButton(
+                onPressed: () => Navigator.of(context).pop(entry.value),
+                child: Text(
+                  entry.key,
+                  style: TextStyle(fontSize: 20.sp),
+                ),
+              );
+            }).toList(),
+          ),
+        ],
       );
     },
   );

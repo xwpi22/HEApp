@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:heapp/games/colors_vs_words_game/colors_vs_word_game_ending_record_view.dart';
 import 'package:heapp/games/number_connection_game/number_connection_game_exceptions.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class UIStopWatch extends StatefulWidget {
   const UIStopWatch({
@@ -61,8 +63,8 @@ class _UIStopWatchState extends State<UIStopWatch> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         buildTimecard(time: minutes, header: 'MINUTES'),
-        const SizedBox(
-          width: 3,
+        SizedBox(
+          width: 3.w,
         ),
         buildTimecard(time: seconds, header: 'SECONDS'),
       ],
@@ -75,8 +77,8 @@ Widget buildTimecard({
   required String header,
 }) =>
     Container(
-      width: 40,
-      height: 40,
+      width: 40.w,
+      height: 40.h,
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
@@ -85,10 +87,10 @@ Widget buildTimecard({
       child: Text(
         time,
         textAlign: TextAlign.center,
-        style: const TextStyle(
+        style: TextStyle(
           fontWeight: FontWeight.bold,
           color: Colors.black,
-          fontSize: 16,
+          fontSize: 16.sp,
         ),
       ),
     );

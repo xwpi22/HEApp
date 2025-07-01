@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:heapp/constants/routes.dart';
+import 'package:heapp/games/colors_vs_words_game/colors_vs_word_game_ending_record_view.dart';
+import 'package:heapp/games/colors_vs_words_game/colors_vs_word_game_ending_view.dart';
 import 'package:heapp/globals/gobals.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 // import 'package:heapp/utilities/dialogs/error_dialog.dart';
 
 class WrapperButton extends StatefulWidget {
@@ -59,12 +63,12 @@ class _WrapperButtonState extends State<WrapperButton> {
         style: ElevatedButton.styleFrom(
           // alignment: const Alignment(0.0, 0.0),
           shape: const CircleBorder(),
-          padding: const EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0.w),
           backgroundColor: _pressedFlag ? Colors.red : Color(0xFF2E609C),
           foregroundColor: Colors.white,
           shadowColor: const Color.fromARGB(247, 186, 184, 184),
-          textStyle: const TextStyle(
-            fontSize: 30,
+          textStyle: TextStyle(
+            fontSize: 30.sp,
             color: Colors.white,
             // wordSpacing: -1,
             fontWeight: FontWeight.bold,
@@ -77,7 +81,7 @@ class _WrapperButtonState extends State<WrapperButton> {
                   color: Colors.white,
                 ),
 
-          maximumSize: const Size(100, 100),
+          maximumSize: Size(100.w, 100.h),
         ),
         onPressed: () {},
         onLongPress: () {

@@ -25,7 +25,7 @@ Expanded genrow(
                 updatestate: updatestate,
                 buttonBackgroundColor: buttonBackgroundColor1),
           ),
-          const SizedBox(width: 5.0),
+          SizedBox(width: 5.0.w),
           Expanded(
             child: genbutton(
                 questionType: questionType,
@@ -53,8 +53,8 @@ ElevatedButton genbutton(
     },
     style: ElevatedButton.styleFrom(
       backgroundColor: buttonBackgroundColor,
-      side: const BorderSide(
-        width: 2.0,
+      side: BorderSide(
+        width: 2.0.w,
         style: BorderStyle.solid,
         color: Colors.black,
       ),

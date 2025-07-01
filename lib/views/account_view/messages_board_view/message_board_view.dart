@@ -73,9 +73,9 @@ class _MessageBoardViewState extends State<MessageBoardView> {
           "留言板",
         ),
         toolbarHeight: 60.h,
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white, // Set the desired color for the back icon here
+        // ),
         actions: [
           IconButton(
             icon: const Icon(Icons.add),

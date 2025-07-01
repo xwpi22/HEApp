@@ -146,8 +146,8 @@ class _RegisterViewState extends State<RegisterView> {
                   'HE App',
                   style: Theme.of(context).textTheme.displayLarge,
                 ),
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 ),
                 TextField(
                   controller: _email,
@@ -160,8 +160,8 @@ class _RegisterViewState extends State<RegisterView> {
                     icon: Icon(Icons.email),
                   ),
                 ),
-                const SizedBox(
-                  height: uiHight,
+                SizedBox(
+                  height: uiHight.h,
                 ),
                 TextField(
                   controller: _password,
@@ -188,8 +188,8 @@ class _RegisterViewState extends State<RegisterView> {
                     ),
                   ),
                 ),
-                const SizedBox(
-                  height: uiHight,
+                SizedBox(
+                  height: uiHight.h,
                 ),
                 TextField(
                   controller: _name,
@@ -201,8 +201,8 @@ class _RegisterViewState extends State<RegisterView> {
                     icon: Icon(Icons.person),
                   ),
                 ),
-                const SizedBox(
-                  height: uiHight,
+                SizedBox(
+                  height: uiHight.h,
                 ),
                 TextField(
                   controller: _phone,
@@ -221,8 +221,8 @@ class _RegisterViewState extends State<RegisterView> {
                         10), // Limits input to 9 digits
                   ],
                 ),
-                const SizedBox(
-                  height: uiHight,
+                SizedBox(
+                  height: uiHight.h,
                 ),
                 TextFormField(
                   controller: _birthDateController,
@@ -234,8 +234,8 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                   onTap: () => _selectDate(context),
                 ),
-                const SizedBox(
-                  height: uiHight,
+                SizedBox(
+                  height: uiHight.h,
                 ),
                 TextFormField(
                   controller: _genderController,

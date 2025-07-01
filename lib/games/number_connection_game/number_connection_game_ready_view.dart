@@ -25,9 +25,9 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
       // floatingActionButton: Icon(Icons.arrow_back),
       appBar: AppBar(
         backgroundColor: Color(0xFF2E609C),
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white, // Set the desired color for the back icon here
+        // ),
         leading: BackButton(
           onPressed: () async {
             Navigator.of(context).pushNamedAndRemoveUntil(
@@ -120,7 +120,7 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
               ),
               textScaleFactor: 1,
             ),
-            const SizedBox(height: sizeboxHeigt),
+            SizedBox(height: sizeboxHeigt.h),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -130,10 +130,10 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                     minimumSize: Size(120.w, 80.h),
                     // backgroundColor: const Color.fromARGB(255, 27, 97, 149),
                     backgroundColor: Colors.white,
-                    shape: const RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: Colors.white,
-                        width: 1.5,
+                        width: 1.5.w,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
@@ -155,17 +155,17 @@ class _NumberConnectionReadyViewState extends State<NumberConnectionReadyView> {
                     textScaleFactor: 1,
                   ),
                 ),
-                const SizedBox(width: 20.0),
+                SizedBox(width: 20.w),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     maximumSize: Size(140.w, 100.h),
                     minimumSize: Size(120.w, 80.h),
                     backgroundColor: Colors.white,
-                    shape: const RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                       side: BorderSide(
                         // color: Colors.black,
                         color: Colors.white,
-                        width: 1.5,
+                        width: 1.5.w,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),

@@ -92,8 +92,8 @@ class _LoginViewState extends State<LoginView> {
                   ),
                 ),
               ),
-              const SizedBox(
-                height: uiHight,
+              SizedBox(
+                height: uiHight.h,
               ),
               TextButton(
                 onPressed: () async {
@@ -158,8 +158,8 @@ class _LoginViewState extends State<LoginView> {
                   '忘記密碼',
                 ),
               ),
-              const SizedBox(
-                height: uiHight,
+              SizedBox(
+                height: uiHight.h,
               ),
               TextButton(
                 onPressed: () {

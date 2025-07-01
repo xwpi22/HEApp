@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:heapp/games/colors_vs_words_game/colors_vs_word_game_ending_record_view.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CountDownAnimation extends StatefulWidget {
   const CountDownAnimation({
@@ -45,7 +47,7 @@ class _CountDownAnimationState extends State<CountDownAnimation>
             children: <Widget>[
               Text(
                 timerString,
-                style: const TextStyle(fontSize: 112.0, color: Colors.brown),
+                style: TextStyle(fontSize: 112.0.sp, color: Colors.brown),
               ),
             ],
           );
