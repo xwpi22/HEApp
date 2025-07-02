@@ -58,9 +58,9 @@ class _MedicationListViewState extends State<MedicationListView> {
                   color: Colors.white,
                 )),
         backgroundColor: Color(0xFF2E609C),
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white, // Set the desired color for the back icon here
+        // ),
         actions: [
           IconButton(
             icon: const Icon(

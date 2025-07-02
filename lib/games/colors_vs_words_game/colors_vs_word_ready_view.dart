@@ -25,9 +25,9 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
       // extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Color(0xFF2E609C),
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white, // Set the desired color for the back icon here
+        // ),
         leading: BackButton(
           onPressed: () async {
             Navigator.of(context).pushNamedAndRemoveUntil(
@@ -140,11 +140,11 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                     backgroundColor: Colors.white,
                     maximumSize: Size(120.w, 100.h),
                     minimumSize: Size(100.w, 80.h),
-                    shape: const RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       side: BorderSide(
                         color: Colors.white,
-                        width: 1.5,
+                        width: 1.5.w,
                       ),
                     ),
                   ),
@@ -165,16 +165,16 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                     textScaleFactor: 1,
                   ),
                 ),
-                const SizedBox(width: sizeboxWidth),
+                SizedBox(width: sizeboxWidth.w),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     maximumSize: Size(120.w, 100.h),
                     minimumSize: Size(100.w, 80.h),
-                    shape: const RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                       side: BorderSide(
                         color: Colors.white,
-                        width: 1.5,
+                        width: 1.5.w,
                       ),
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                     ),
@@ -195,17 +195,17 @@ class _ColorsVsWordGameReadyViewState extends State<ColorsVsWordGameReadyView> {
                     textScaleFactor: 1,
                   ),
                 ),
-                const SizedBox(width: sizeboxWidth),
+                SizedBox(width: sizeboxWidth.w),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.white,
                     maximumSize: Size(120.w, 100.h),
                     minimumSize: Size(100.w, 80.h),
-                    shape: const RoundedRectangleBorder(
+                    shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(20)),
                       side: BorderSide(
                         color: Colors.white,
-                        width: 1.5,
+                        width: 1.5.w,
                       ),
                     ),
                   ),

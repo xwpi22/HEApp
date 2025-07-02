@@ -29,9 +29,9 @@ class _GamesHomeViewState extends State<GamesHomeView> {
               Icons.home_filled,
             )),
         backgroundColor: Color(0xFF2E609C),
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white,
+        // ),
       ),
       body: Center(
         child: Column(
@@ -45,8 +45,8 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 50.h,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -54,6 +54,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                     Size(200.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
                 backgroundColor: Color(0xFF2E609C),
+                padding: EdgeInsets.all(20.0),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     // color: Colors.black,
@@ -74,8 +75,8 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 50.h,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -83,6 +84,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                     Size(200.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
                 backgroundColor: Color(0xFF2E609C),
+                padding: EdgeInsets.all(20.0),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     // color: Colors.black,
@@ -103,8 +105,8 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 50,
+            SizedBox(
+              height: 50.h,
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -112,6 +114,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
                     Size(200.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
                 backgroundColor: Color(0xFF2E609C),
+                padding: EdgeInsets.all(20.0),
                 shape: RoundedRectangleBorder(
                   side: BorderSide(
                     // color: Colors.black,

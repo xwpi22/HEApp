@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:heapp/constants/routes.dart';
+import 'package:heapp/games/colors_vs_words_game/colors_vs_word_game_ending_record_view.dart';
 import 'package:heapp/globals/gobals.dart';
 import 'package:heapp/services/auth/auth_service.dart';
 import 'package:heapp/services/crud/services/crud_service.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SoldiersInFormationGame extends StatefulWidget {
   const SoldiersInFormationGame({super.key});
@@ -62,9 +64,9 @@ class _SoldiersInFormationGameState extends State<SoldiersInFormationGame> {
       ),
       body: Center(
         child: Container(
-          width: gridWidth,
-          height: gridHeight,
-          padding: const EdgeInsets.all(8.0),
+          width: gridWidth.w,
+          height: gridHeight.h,
+          padding: EdgeInsets.all(8.0),
           child: GridView.builder(
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 8, // 8 columns

@@ -17,7 +17,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
   Widget build(BuildContext context) {
     const double sizeboxHeigt = 20.0;
     return Scaffold(
-      extendBodyBehindAppBar: true,
+      extendBodyBehindAppBar: false,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,7 +45,7 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
             ),
             SizedBox(
               width: 150.w,
-              height: 10,
+              height: 10.h,
               child: const Divider(
                 color: Colors.black,
               ),
@@ -142,16 +142,16 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                 ),
               ],
             ),
-            const SizedBox(
-              width: 220,
-              height: 50,
+            SizedBox(
+              width: 220.w,
+              height: 50.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 100.h),
+                    maximumSize: Size(140.w, 120.h),
                     minimumSize: Size(120.w, 80.h),
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -165,19 +165,19 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                       (_) => false,
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     '遊戲\n選單',
                     // style: GoogleFonts.permanentMarker(fontSize: 18),
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(fontSize: 28.sp),
                   ),
                 ),
-                const SizedBox(
-                  width: 20,
-                  height: 50,
+                SizedBox(
+                  width: 20.w,
+                  height: 50.h,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 100.h),
+                    maximumSize: Size(140.w, 120.h),
                     minimumSize: Size(120.w, 80.h),
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -191,10 +191,10 @@ class _NCEndingRecordViewState extends State<NCEndingRecordView> {
                       (_) => false,
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     '再來\n一次',
                     // style: GoogleFonts.permanentMarker(fontSize: 18),
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(fontSize: 28.sp),
                   ),
                 ),
               ],

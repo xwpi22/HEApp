@@ -136,7 +136,7 @@ class _DropdownButtonOfGameListState extends State<DropdownButtonOfGameList> {
               child: Text(
                 gameMap.entries.elementAt(index).value, // Display the game name
                 style: TextStyle(
-                  fontSize: 32,
+                  fontSize: 32.sp,
                   color: dropdownIndex == index
                       ? Colors.black
                       : Colors.grey, // Black for selected, grey for others

@@ -127,16 +127,16 @@ class _CWEndingRecordViewState extends State<CWEndingRecordView> {
                 ),
               ],
             ),
-            const SizedBox(
-              width: 220,
-              height: 50,
+            SizedBox(
+              width: 220.w,
+              height: 50.h,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 100.h),
+                    maximumSize: Size(140.w, 120.h),
                     minimumSize: Size(120.w, 80.h),
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -150,18 +150,18 @@ class _CWEndingRecordViewState extends State<CWEndingRecordView> {
                       (_) => false,
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     '遊戲\n選單',
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(fontSize: 28.sp),
                   ),
                 ),
-                const SizedBox(
-                  width: 20,
-                  height: 50,
+                SizedBox(
+                  width: 20.w,
+                  height: 50.h,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    maximumSize: Size(140.w, 80.h),
+                    maximumSize: Size(140.w, 120.h),
                     minimumSize: Size(120.w, 80.h),
                     shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(Radius.circular(30)),
@@ -175,9 +175,9 @@ class _CWEndingRecordViewState extends State<CWEndingRecordView> {
                       (_) => false,
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     '再來\n一次',
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(fontSize: 28.sp),
                   ),
                 ),
               ],

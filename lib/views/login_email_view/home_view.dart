@@ -51,10 +51,10 @@ class _HomeViewState extends State<HomeView> {
           // extendBodyBehindAppBar: true,
           // floatingActionButton: Icon(Icons.arrow_back),
           appBar: AppBar(
-            iconTheme: IconThemeData(
-              color:
-                  Colors.white, // Set the desired color for the back icon here
-            ),
+            // iconTheme: IconThemeData(
+            //   color:
+            //       Colors.white, // Set the desired color for the back icon here
+            // ),
             actions: <Widget>[
               IconButton.outlined(
                 onPressed: () async {
@@ -97,12 +97,12 @@ class _HomeViewState extends State<HomeView> {
                   style:
                       TextStyle(fontSize: 28.sp, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 10.h),
                 Text(
                   '歡迎回來，請選擇功能',
                   style: TextStyle(fontSize: 20.sp, color: Colors.grey),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 50.h),
 
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -131,13 +131,13 @@ class _HomeViewState extends State<HomeView> {
                       // SizedBox(width: 200), // icon 和文字間距
                       Text(
                         '遊戲選單',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(color: Colors.white, fontSize: 30.sp),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -169,7 +169,7 @@ class _HomeViewState extends State<HomeView> {
                       // SizedBox(width: 200), // icon 和文字間距
                       Text(
                         '每日用藥',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(color: Colors.white, fontSize: 30.sp),
                       ),
                     ],
                   ),
@@ -181,8 +181,8 @@ class _HomeViewState extends State<HomeView> {
                   //   ),
                   // ),
                 ),
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -213,13 +213,13 @@ class _HomeViewState extends State<HomeView> {
                       // SizedBox(width: 200), // icon 和文字間距
                       Text(
                         '會員專區',
-                        style: TextStyle(color: Colors.white, fontSize: 30),
+                        style: TextStyle(color: Colors.white, fontSize: 30.sp),
                       ),
                     ],
                   ),
                 ),
-                const SizedBox(
-                  height: 50,
+                SizedBox(
+                  height: 50.h,
                 ),
               ],
             ),

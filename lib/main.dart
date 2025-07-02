@@ -51,6 +51,7 @@ class MyApp extends StatelessWidget {
             seedColor: Color(0xFF2E609C),
           ),
           appBarTheme: AppBarTheme(
+            centerTitle: true,
             backgroundColor: Color(0xFF2E609C),
             surfaceTintColor: Colors.transparent,
             // set surfaceTintColor to disable recoloring the AppBar while scrolling the number picker
@@ -61,7 +62,22 @@ class MyApp extends StatelessWidget {
                       .colorScheme
                       .onSecondary, // Ensure visibility
                 ),
+            iconTheme: IconThemeData(
+              color: Colors.white,
+              size: 28.w,
+            ),
           ),
+          // dialogTheme: DialogTheme(
+          //   titleTextStyle: TextStyle(
+          //     fontSize: 24.sp,
+          //     fontWeight: FontWeight.bold,
+          //     color: Colors.black,
+          //   ),
+          //   contentTextStyle: TextStyle(
+          //     fontSize: 18.sp,
+          //     color: Colors.black87,
+          //   ),
+          // ),
           // primarySwatch: Colors.white,
           primaryColor: Colors.grey,
           secondaryHeaderColor: Colors.white,

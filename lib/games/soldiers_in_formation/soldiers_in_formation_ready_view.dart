@@ -26,9 +26,9 @@ class _SoldiersInFormationGameReadyViewState
       // floatingActionButton: Icon(Icons.arrow_back),
       appBar: AppBar(
         backgroundColor: Color(0xFF2E609C),
-        iconTheme: IconThemeData(
-          color: Colors.white, // Set the desired color for the back icon here
-        ),
+        // iconTheme: IconThemeData(
+        //   color: Colors.white, // Set the desired color for the back icon here
+        // ),
         leading: BackButton(
           onPressed: () async {
             Navigator.of(context).pushNamedAndRemoveUntil(
@@ -48,7 +48,7 @@ class _SoldiersInFormationGameReadyViewState
               style: Theme.of(context).textTheme.headlineLarge,
               textScaleFactor: 1.5,
             ),
-            const SizedBox(height: sizeboxHeigt),
+            SizedBox(height: sizeboxHeigt.h),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -84,14 +84,14 @@ class _SoldiersInFormationGameReadyViewState
                 ),
               ],
             ),
-            const SizedBox(height: sizeboxHeigt),
+            SizedBox(height: sizeboxHeigt.h),
             Image.asset(
               'assets/images/SIFGameRule.png',
               width: 250.w,
               height: 125.h,
               fit: BoxFit.contain, // Adjust according to your requirement
             ),
-            const SizedBox(height: sizeboxHeigt * 1.5),
+            SizedBox(height: sizeboxHeigt.h * 1.5.h),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
