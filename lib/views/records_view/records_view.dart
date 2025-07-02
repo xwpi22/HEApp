@@ -117,33 +117,37 @@ class _DropdownButtonOfGameListState extends State<DropdownButtonOfGameList> {
       mainAxisAlignment:
           MainAxisAlignment.end, // Align the dropdown to the right
       children: [
-        DropdownButton<int>(
-          value: dropdownIndex, // dropdownIndex as int
-          icon: const Icon(Icons.expand_more),
-          elevation: 16,
-          style: const TextStyle(color: Colors.black),
-          onChanged: (int? value) {
-            if (value != null) {
-              setState(() {
-                dropdownIndex = value; // Update dropdownIndex (index)
-              });
-              widget.onChanged(value); // Call the callback when index changes
-            }
-          },
-          items: List.generate(gameMap.length, (index) {
-            return DropdownMenuItem<int>(
-              value: index, // The index of the game in the list
-              child: Text(
-                gameMap.entries.elementAt(index).value, // Display the game name
-                style: TextStyle(
-                  fontSize: 32.sp,
-                  color: dropdownIndex == index
-                      ? Colors.black
-                      : Colors.grey, // Black for selected, grey for others
+        DropdownButtonHideUnderline(
+          child: DropdownButton<int>(
+            value: dropdownIndex, // dropdownIndex as int
+            icon: const Icon(Icons.expand_more),
+            elevation: 16,
+            style: const TextStyle(color: Colors.black87),
+            onChanged: (int? value) {
+              if (value != null) {
+                setState(() {
+                  dropdownIndex = value; // Update dropdownIndex (index)
+                });
+                widget.onChanged(value); // Call the callback when index changes
+              }
+            },
+            items: List.generate(gameMap.length, (index) {
+              return DropdownMenuItem<int>(
+                value: index, // The index of the game in the list
+                child: Text(
+                  gameMap.entries
+                      .elementAt(index)
+                      .value, // Display the game name
+                  style: TextStyle(
+                    fontSize: 32.sp,
+                    color: dropdownIndex == index
+                        ? Colors.black87
+                        : Colors.grey, // Black for selected, grey for others
+                  ),
                 ),
-              ),
-            );
-          }),
+              );
+            }),
+          ),
         ),
       ],
     );

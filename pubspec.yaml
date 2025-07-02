@@ -46,7 +46,10 @@ dependencies:
   firebase_auth: ^5.3.1
   numberpicker: ^2.1.2
   responsive_framework: ^1.1.1
-  mobile_scanner: ^3.5.2
+  mobile_scanner: 
+    git:
+      url: https://github.com/juliansteenbakker/mobile_scanner.git
+      ref: develop
 
 dev_dependencies:
   flutter_test:

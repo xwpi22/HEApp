@@ -277,6 +277,7 @@ class _AccountViewState extends State<AccountView> {
                               ),
                             ),
                           ),
+                          SizedBox(width: 10.0.w),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               maximumSize: Size(120.w, 120.h),
@@ -306,7 +307,7 @@ class _AccountViewState extends State<AccountView> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 10.0),
+                          SizedBox(width: 10.0.w),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               maximumSize: Size(120.w, 120.h),

@@ -54,7 +54,9 @@ class _QrcodeScanningState extends State<QrcodeScanning> {
                 width: scanSize,
                 height: scanSize,
                 child: MobileScanner(
-                  controller: MobileScannerController(),
+                  controller: MobileScannerController(
+                    detectionSpeed: DetectionSpeed.normal,
+                  ),
                   scanWindow: Rect.fromLTWH(0, 0, scanSize, scanSize),
                   onDetect: (capture) {
                     final barcode = capture.barcodes.first;

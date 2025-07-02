@@ -51,7 +51,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 maximumSize:
-                    Size(200.w, 80.h), // Use ScreenUtil for responsive size
+                    Size(220.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
                 backgroundColor: Color(0xFF2E609C),
                 padding: EdgeInsets.all(20.0),
@@ -81,7 +81,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 maximumSize:
-                    Size(200.w, 80.h), // Use ScreenUtil for responsive size
+                    Size(220.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
                 backgroundColor: Color(0xFF2E609C),
                 padding: EdgeInsets.all(20.0),
@@ -111,7 +111,7 @@ class _GamesHomeViewState extends State<GamesHomeView> {
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 maximumSize:
-                    Size(200.w, 80.h), // Use ScreenUtil for responsive size
+                    Size(220.w, 80.h), // Use ScreenUtil for responsive size
                 minimumSize: Size(160.w, 60.h),
                 backgroundColor: Color(0xFF2E609C),
                 padding: EdgeInsets.all(20.0),
