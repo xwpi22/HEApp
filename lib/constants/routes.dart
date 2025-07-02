@@ -16,4 +16,5 @@ const soldiersInFormationGameReadyRoute = '/soldiers_in_formation_game_ready';
 const sifgameoverRoute = '/soldiers_in_formation_game_over';
 const forgotPasswordRoute = '/forget_password_view';
 const medicationRoute = '/medication_record';
+const qrcodescanningRoute = '/qrcodescanning_view';
 // const createOrUpdateNoteRoute = '/notes/new-note/';

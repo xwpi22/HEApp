@@ -250,6 +250,8 @@ class _RegisterViewState extends State<RegisterView> {
                       context), // Call the gender selection dialog
                 ),
 
+                SizedBox(height: 10.h),
+
                 //controller connect to TextButton
                 TextButton(
                   onPressed: () async {
@@ -308,6 +310,7 @@ class _RegisterViewState extends State<RegisterView> {
                     ),
                   ),
                 ),
+                SizedBox(height: 10.h),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context)
