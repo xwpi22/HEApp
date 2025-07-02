@@ -163,8 +163,8 @@ class _LoginViewState extends State<LoginView> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.of(context)
-                      .pushNamedAndRemoveUntil(registerRoute, (route) => false);
+                  Navigator.of(context).pushNamedAndRemoveUntil(
+                      qrcodescanningRoute, (route) => false);
                 },
                 child: const Text(
                   '點擊此處註冊',

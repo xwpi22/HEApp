@@ -1,6 +1,8 @@
 // import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
 
 import 'package:flutter/material.dart';
+import 'package:heapp/views/records_view/records_list_view.dart';
+import 'package:heapp/views/records_view/records_view.dart';
 import 'dart:io';
 import 'package:image/image.dart' as img;
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -247,6 +249,34 @@ class _AccountViewState extends State<AccountView> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
+                          ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              maximumSize: Size(120.w, 120.h),
+                              minimumSize: Size(100.w, 80.h),
+                              backgroundColor: Colors.white,
+                              shape: const RoundedRectangleBorder(
+                                side: BorderSide(
+                                  // color: Colors.black,
+                                  color: Colors.white,
+                                  width: 1.5,
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(20)),
+                              ),
+                            ),
+                            onPressed: () async {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => RecordsView()));
+                            },
+                            child: Text(
+                              '遊戲\n紀錄',
+                              style: TextStyle(
+                                fontSize: 27.sp,
+                                fontWeight: FontWeight.bold,
+                                color: Color(0xFF2E609C),
+                              ),
+                            ),
+                          ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
                               maximumSize: Size(120.w, 120.h),

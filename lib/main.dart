@@ -18,6 +18,7 @@ import 'package:heapp/views/game_home_view/games_home_view.dart';
 import 'package:heapp/views/login_email_view/forget_password_view.dart';
 import 'package:heapp/views/login_email_view/home_view.dart';
 import 'package:heapp/views/login_email_view/login_view.dart';
+import 'package:heapp/views/login_email_view/qrcodescanning_view.dart';
 import 'package:heapp/views/records_view/records_view.dart';
 import 'package:heapp/views/login_email_view/register_view.dart';
 import 'package:heapp/views/login_email_view/verified.dart';
@@ -151,6 +152,7 @@ class MyApp extends StatelessWidget {
           cwgameoverRoute: (context) => const CWGameOverView(),
           sifgameoverRoute: (context) => const SIFGameOverView(),
           forgotPasswordRoute: (context) => const ForgetPassView(),
+          qrcodescanningRoute: (context) => const QrcodeScanning(),
         },
         onGenerateRoute: (settings) {
           switch (settings.name) {
