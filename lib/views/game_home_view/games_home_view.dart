@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:heapp/constants/routes.dart';
 import 'package:heapp/globals/gobals.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:sqflite/utils/utils.dart';
 
 class GamesHomeView extends StatefulWidget {
@@ -29,6 +30,14 @@ class _GamesHomeViewState extends State<GamesHomeView> {
               Icons.home_filled,
             )),
         backgroundColor: Color(0xFF2E609C),
+        actions: [
+          IconButton(
+              color: Colors.white,
+              onPressed: () async {
+                Navigator.pushNamed(context, recordsRoute);
+              },
+              icon: Icon(MdiIcons.listBox)),
+        ],
         // iconTheme: IconThemeData(
         //   color: Colors.white,
         // ),

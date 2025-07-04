@@ -61,10 +61,11 @@ class _WrapperButtonState extends State<WrapperButton> {
     // Offset position = widget.postiions[widget.labelnum - 1];
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
+          minimumSize: Size(40.w, 40.h),
           // alignment: const Alignment(0.0, 0.0),
           shape: const CircleBorder(),
           padding: EdgeInsets.all(10.0.w),
-          backgroundColor: _pressedFlag ? Colors.red : Color(0xFF2E609C),
+          backgroundColor: _pressedFlag ? Colors.grey : Color(0xFF2E609C),
           foregroundColor: Colors.white,
           shadowColor: const Color.fromARGB(247, 186, 184, 184),
           textStyle: TextStyle(
@@ -75,7 +76,7 @@ class _WrapperButtonState extends State<WrapperButton> {
           ),
           side: _pressedFlag
               ? const BorderSide(
-                  color: Colors.red,
+                  color: Colors.grey,
                 )
               : const BorderSide(
                   color: Colors.white,

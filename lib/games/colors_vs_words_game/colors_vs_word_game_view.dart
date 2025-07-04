@@ -19,7 +19,7 @@ class ColorvsWordGameView extends StatefulWidget {
 class _ColorvsWordGameViewState extends State<ColorvsWordGameView> {
   // DatabaseRecords? _record;
   late final Services _services;
-  late final String _gametime;
+  String? _gametime;
   final stopwatch = Stopwatch();
   static const _gameid = 1; // gameMap[1]
 
@@ -38,7 +38,7 @@ class _ColorvsWordGameViewState extends State<ColorvsWordGameView> {
     }
 
     if (_currinterferenceOptionIndex == 0) {
-      stopwatch.stop;
+      stopwatch.stop();
       String twoDigits(int n) => n.toString().padLeft(2, '0');
       final minutes = twoDigits(stopwatch.elapsed.inMinutes.remainder(60));
       final seconds = twoDigits(stopwatch.elapsed.inSeconds.remainder(60));
@@ -72,15 +72,27 @@ class _ColorvsWordGameViewState extends State<ColorvsWordGameView> {
   }
 
   void _createAndSaveNewRecord() async {
+    if (_gametime == null) return; // Don't save if game never finished
+
     final currentUser = AuthService.firebase().currentUser!;
     final email = currentUser.email;
     final owner = await _services.getDatabaseUser(email: email);
     await _services.createDatabaseRecord(
       userId: owner.id,
       gameId: _gameid,
-      gameTime: _gametime,
+      gameTime: _gametime!,
       score: globScore,
     );
+
+    // final currentUser = AuthService.firebase().currentUser!;
+    // final email = currentUser.email;
+    // final owner = await _services.getDatabaseUser(email: email);
+    // await _services.createDatabaseRecord(
+    //   userId: owner.id,
+    //   gameId: _gameid,
+    //   gameTime: _gametime,
+    //   score: globScore,
+    // );
   }
 
   @override

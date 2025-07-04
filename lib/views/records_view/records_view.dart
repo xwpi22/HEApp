@@ -35,6 +35,10 @@ class _RecordsViewState extends State<RecordsView> {
 
   @override
   Widget build(BuildContext context) {
+    int selectedIndex = 0;
+
+    final List<String> options = ['選項一', '選項二', '選項三'];
+
     return Scaffold(
       appBar: AppBar(
         title: Text('遊戲紀錄',
@@ -47,14 +51,20 @@ class _RecordsViewState extends State<RecordsView> {
       extendBodyBehindAppBar: false,
       body: Column(
         children: [
-          DropdownButtonOfGameList(
-            selectedGameId: selectedGameId, // Pass the current selectedGameId
-            onChanged: (newGameId) {
-              setState(() {
-                selectedGameId =
-                    newGameId; // Update selectedGameId when dropdown changes
-              });
-            },
+          Align(
+            alignment: Alignment.centerRight,
+            child: DropdownButtonOfGameList(
+              selectedGameId: selectedGameId, // Pass the current selectedGameId
+              onChanged: (newGameId) {
+                setState(() {
+                  selectedGameId =
+                      newGameId; // Update selectedGameId when dropdown changes
+                });
+              },
+            ),
+          ),
+          SizedBox(
+            height: 5.h,
           ),
           Expanded(
               child: FutureBuilder<Iterable<DatabaseRecord>>(
@@ -113,43 +123,42 @@ class _DropdownButtonOfGameListState extends State<DropdownButtonOfGameList> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment:
-          MainAxisAlignment.end, // Align the dropdown to the right
-      children: [
-        DropdownButtonHideUnderline(
-          child: DropdownButton<int>(
-            value: dropdownIndex, // dropdownIndex as int
-            icon: const Icon(Icons.expand_more),
-            elevation: 16,
-            style: const TextStyle(color: Colors.black87),
-            onChanged: (int? value) {
-              if (value != null) {
-                setState(() {
-                  dropdownIndex = value; // Update dropdownIndex (index)
-                });
-                widget.onChanged(value); // Call the callback when index changes
-              }
-            },
-            items: List.generate(gameMap.length, (index) {
-              return DropdownMenuItem<int>(
-                value: index, // The index of the game in the list
+    return SizedBox(
+      child: DropdownButtonHideUnderline(
+        child: DropdownButton<int>(
+          itemHeight: 50.h,
+          value: dropdownIndex, // dropdownIndex as int
+          icon: const Icon(Icons.expand_more),
+          // elevation: 16,
+          style: const TextStyle(color: Colors.black87),
+          onChanged: (int? value) {
+            if (value != null) {
+              setState(() {
+                dropdownIndex = value; // Update dropdownIndex (index)
+              });
+              widget.onChanged(value); // Call the callback when index changes
+            }
+          },
+          items: List.generate(gameMap.length, (index) {
+            return DropdownMenuItem<int>(
+              value: index, // The index of the game in the list
+              child: Container(
+                // height: 48.h,
+                alignment: Alignment.center,
                 child: Text(
-                  gameMap.entries
-                      .elementAt(index)
-                      .value, // Display the game name
+                  gameMap.entries.elementAt(index).value,
+                  // overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 32.sp,
-                    color: dropdownIndex == index
-                        ? Colors.black87
-                        : Colors.grey, // Black for selected, grey for others
+                    fontSize: 28.sp,
+                    color:
+                        dropdownIndex == index ? Colors.black87 : Colors.grey,
                   ),
                 ),
-              );
-            }),
-          ),
+              ),
+            );
+          }),
         ),
-      ],
+      ),
     );
   }
 }

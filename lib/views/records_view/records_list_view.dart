@@ -28,7 +28,7 @@ class RecordsListView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: EdgeInsets.all(8.0.w),
               // child: Text(
               //   gameName, // Fallback if game name is not found
               //   style: TextStyle(
@@ -39,7 +39,7 @@ class RecordsListView extends StatelessWidget {
               // ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              padding: EdgeInsets.symmetric(horizontal: 8.0.w),
               child: Row(
                 children: [
                   Expanded(
