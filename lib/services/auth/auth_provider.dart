@@ -11,6 +11,11 @@ abstract class AuthProvider {
     required String email,
     required String password,
   });
+  Future<void> deleteUser();
+  Future<void> reauthenticate({
+    required String email,
+    required String password,
+  });
   Future<void> logOut();
   Future<void> sendEmailVerification();
   Stream<AuthUser?> get authStateChanges;

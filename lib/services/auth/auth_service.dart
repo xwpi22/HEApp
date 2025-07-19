@@ -18,6 +18,16 @@ class AuthService implements AuthProvider {
       provider.createUser(email: email, password: password);
 
   @override
+  Future<void> deleteUser() => provider.deleteUser();
+
+  @override
+  Future<void> reauthenticate({
+    required String email,
+    required String password,
+  }) =>
+      provider.reauthenticate(email: email, password: password);
+
+  @override
   AuthUser? get currentUser => provider.currentUser;
 
   @override

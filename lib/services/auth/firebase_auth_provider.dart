@@ -3,7 +3,7 @@ import 'package:heapp/firebase_options.dart';
 import 'package:heapp/services/auth/auth_exceptions.dart';
 import 'package:heapp/services/auth/auth_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart'
-    show FirebaseAuth, FirebaseAuthException;
+    show EmailAuthProvider, FirebaseAuth, FirebaseAuthException;
 import 'package:heapp/services/auth/auth_user.dart';
 
 class FirebaseAuthProvider implements AuthProvider {
@@ -40,6 +40,47 @@ class FirebaseAuthProvider implements AuthProvider {
       }
     } catch (_) {
       throw GenericAuthException();
+    }
+  }
+
+  @override
+  Future<void> deleteUser() async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw Exception('沒有登入中的使用者');
+    }
+
+    try {
+      await user.delete();
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'requires-recent-login') {
+        throw RequiresRecentLoginAuthException();
+      } else {
+        throw GenericAuthException();
+      }
+    }
+  }
+
+  @override
+  Future<void> reauthenticate({
+    required String email,
+    required String password,
+  }) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw Exception('沒有登入中的使用者');
+    }
+
+    try {
+      final credential =
+          EmailAuthProvider.credential(email: email, password: password);
+      await user.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'wrong-password') {
+        throw WrongPasswordOrUserNotFoundAuthException();
+      } else {
+        throw GenericAuthException();
+      }
     }
   }
 

@@ -61,7 +61,7 @@ class _WrapperButtonState extends State<WrapperButton> {
     // Offset position = widget.postiions[widget.labelnum - 1];
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-          minimumSize: Size(40.w, 40.h),
+          // minimumSize: Size(40.w, 40.h),
           // alignment: const Alignment(0.0, 0.0),
           shape: const CircleBorder(),
           padding: EdgeInsets.all(10.0.w),
@@ -69,7 +69,7 @@ class _WrapperButtonState extends State<WrapperButton> {
           foregroundColor: Colors.white,
           shadowColor: const Color.fromARGB(247, 186, 184, 184),
           textStyle: TextStyle(
-            fontSize: 30.sp,
+            fontSize: 30,
             color: Colors.white,
             // wordSpacing: -1,
             fontWeight: FontWeight.bold,

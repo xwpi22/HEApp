@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
+// import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
 import 'package:http/http.dart' as http;
 import 'package:heapp/extensions/filter.dart';
 import 'package:heapp/services/auth/auth_service.dart';
@@ -180,28 +181,146 @@ class Services {
     }
   }
 
-  Future<User> deleteDatabaseUser(int userId, String userName) async {
-    final response = await http.delete(
-      Uri.parse(userApi),
-      headers: {
-        'Content-Type': 'application/json; charset=UTF-8', // Added header
-      },
-      body: jsonEncode(
-        <String, int>{
-          'id': userId,
-        },
-      ),
+  Future<void> deleteDatabaseUser(String userId, String email) async {
+    final headers = {
+      'Content-Type': 'application/json; charset=UTF-8',
+    };
+
+    // 1. 刪除主使用者資料
+    final userDeleteResponse = await http.delete(
+      Uri.parse('$userApi/$userId'),
+      headers: headers,
     );
+
+    if (userDeleteResponse.statusCode != 204) {
+      print('刪主帳號');
+      print(userDeleteResponse.statusCode);
+      print(userDeleteResponse.reasonPhrase);
+      throw CouldNotDeleteUser(); // 主帳號沒刪成功就中止
+    } else {
+      print(userId);
+    }
+
+    // final recordDeleteResponse = await http.delete(
+    //   Uri.parse('$recordApi/$userId'),
+    //   headers: headers,
+    // );
+
+    // if (recordDeleteResponse.statusCode != 200) {
+    //   print('刪record $userDeleteResponse');
+    //   throw CouldNotDeleteUser(); // 主帳號沒刪成功就中止
+    // }
+
+    // 不需強制檢查每個子資料都刪除成功，容忍 204/404 是常見做法
+
     // If the server did return a 200 OK response,
     // then parse the JSON. After deleting,
     // you'll get an empty JSON `{}` response.
     // Don't return `null`, otherwise `snapshot.hasData`
     // will always return false on `FutureBuilder`.
-    if (response.statusCode == 200) {
-      return User.fromJson(jsonDecode(response.body));
+    return;
+  }
+
+  Future<String> previewUserDeletionData(String? userId, String? email) async {
+    final headers = {
+      'Content-Type': 'application/json; charset=UTF-8',
+    };
+
+    final buffer = StringBuffer();
+
+    // 1. 撈使用者主資料
+    final Uri uri;
+    buffer.writeln(userId);
+    // if (email != null) {
+    //   uri = Uri.parse('$userApi?email=${Uri.encodeComponent(email)}');
+    //   // uri = Uri.parse('$userApi/$userId');
+    // } else {
+    //   throw Exception('No valid identifier provided');
+    // }
+
+    uri = Uri.parse('$userApi/$userId');
+
+    final userResponse = await http.get(
+      uri,
+      headers: headers,
+    );
+
+    final id;
+    if (userResponse.statusCode == 200) {
+      final user = jsonDecode(userResponse.body);
+
+      id = user['_id'];
+
+      buffer.writeln('🧑 使用者資料:');
+      buffer.writeln('_id: ${user['_id']}');
+      buffer.writeln('姓名: ${user['name']}');
+      buffer.writeln('Email: ${user['email']}');
+      buffer.writeln('');
     } else {
-      throw CouldNotDeleteUser();
+      buffer.writeln('❌ 無法取得使用者資料 ${userResponse.statusCode.toString()}');
     }
+
+    // // 2. 撈留言
+    // final messageResponse = await http.get(
+    //   Uri.parse('$userApi/$userId/messages'),
+    //   headers: headers,
+    // );
+
+    // if (messageResponse.statusCode == 200) {
+    //   final messages = jsonDecode(messageResponse.body) as List<dynamic>;
+    //   buffer.writeln('💬 留言 (${messages.length} 筆):');
+    //   for (final msg in messages.take(3)) {
+    //     buffer.writeln('- ${msg['message']}');
+    //   }
+    //   if (messages.length > 3) {
+    //     buffer.writeln('...（還有 ${messages.length - 3} 筆）');
+    //   }
+    //   buffer.writeln('');
+    // } else {
+    //   buffer.writeln('❌ 無法取得留言');
+    // }
+
+    // // 3. 撈藥物資料
+    // final medResponse = await http.get(
+    //   Uri.parse('$userApi/$userId/medication'),
+    //   headers: headers,
+    // );
+
+    // if (medResponse.statusCode == 200) {
+    //   final meds = jsonDecode(medResponse.body) as List<dynamic>;
+    //   buffer.writeln('💊 藥物資料 (${meds.length} 筆):');
+    //   for (final med in meds.take(3)) {
+    //     buffer.writeln('- ${med['name']}');
+    //   }
+    //   if (meds.length > 3) buffer.writeln('...（還有 ${meds.length - 3} 筆）');
+    //   buffer.writeln('');
+    // } else {
+    //   buffer.writeln('❌ 無法取得藥物資料');
+    // }
+
+    // // 4. 撈健康紀錄
+    // final recordResponse = await http.get(
+    //   Uri.parse('$recordApi/$userId'),
+    //   headers: headers,
+    // );
+
+    // if (recordResponse.statusCode == 200) {
+    //   buffer.writeln('📈 健康／遊戲紀錄 (${records.length} 筆):');
+    //   if (records.isNotEmpty) {
+    //     for (var rec in records.take(3)) {
+    //       buffer.writeln(
+    //           '- 遊戲ID: ${rec['gameId']}, 分數: ${rec['score']}, 時間: ${rec['gameTime']}');
+    //     }
+    //     if (records.length > 3) {
+    //       buffer.writeln('...（還有 ${records.length - 3} 筆）');
+    //     }
+    //   }
+    //   buffer.writeln('');
+    // } else {
+    //   buffer.writeln('❌ 無法取得紀錄資料 (GET /records/$userId)');
+    // }
+
+    return buffer.toString();
   }
 
   Future<void> logOut() async {
@@ -237,6 +356,7 @@ class Services {
     if (response.statusCode == 200) {
       var res = jsonDecode(response.body);
       _user = User.fromJson(res);
+      print("get successs");
       // await _cacheRecords();
       return _user!;
     } else if (response.statusCode == 404) {

@@ -1,6 +1,8 @@
 // import 'dart:nativewrappers/_internal/vm/lib/internal_patch.dart';
 
 import 'package:flutter/material.dart';
+import 'package:heapp/services/auth/auth_exceptions.dart';
+import 'package:heapp/utilities/dialogs/error_dialog.dart';
 import 'package:heapp/views/records_view/records_list_view.dart';
 import 'package:heapp/views/records_view/records_view.dart';
 import 'dart:io';
@@ -339,6 +341,125 @@ class _AccountViewState extends State<AccountView> {
                           ),
                         ],
                       ),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          TextButton(
+                            onPressed: () async {
+                              final TextEditingController passwordController =
+                                  TextEditingController();
+                              bool confirmPressed = false;
+
+                              final shouldDelete = await showDialog<bool>(
+                                context: context,
+                                builder: (context) {
+                                  return StatefulBuilder(
+                                    builder: (context, setState) {
+                                      return AlertDialog(
+                                        title: const Text('確認刪除帳號'),
+                                        content: Column(
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            const Text('刪除帳號將無法復原，請輸入密碼以確認操作'),
+                                            const SizedBox(height: 16),
+                                            TextField(
+                                              controller: passwordController,
+                                              obscureText: true,
+                                              onChanged: (_) => setState(
+                                                  () {}), // 每次輸入觸發 rebuild
+                                              decoration: const InputDecoration(
+                                                labelText: '密碼',
+                                                border: OutlineInputBorder(),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () =>
+                                                Navigator.of(context)
+                                                    .pop(false),
+                                            child: const Text('取消'),
+                                          ),
+                                          TextButton(
+                                            onPressed: passwordController
+                                                    .text.isNotEmpty
+                                                ? () {
+                                                    confirmPressed = true;
+                                                    Navigator.of(context)
+                                                        .pop(true);
+                                                  }
+                                                : null,
+                                            child: const Text(
+                                              '確認刪除',
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            ),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
+                                },
+                              );
+
+                              if (shouldDelete != true) return;
+
+                              final password = passwordController.text.trim();
+                              if (password.isEmpty) {
+                                await showErrorDialog(
+                                    context, '密碼錯誤', '請輸入密碼以確認刪除');
+                                return;
+                              }
+
+                              final userId = user.id;
+                              final email = user.email;
+
+                              try {
+                                // ✅ 重新驗證身份
+                                await AuthService.firebase().reauthenticate(
+                                  email: email,
+                                  password: password,
+                                );
+
+                                // ✅ 刪除 Firebase 帳號
+                                await AuthService.firebase().deleteUser();
+
+                                // ✅ 刪除資料庫中的使用者資料
+                                await Services()
+                                    .deleteDatabaseUser(userId, email);
+
+                                // ✅ 跳轉回登入頁
+                                if (context.mounted) {
+                                  Navigator.of(context).pushNamedAndRemoveUntil(
+                                    loginRoute,
+                                    (route) => false,
+                                  );
+                                }
+                              } on WrongPasswordOrUserNotFoundAuthException {
+                                await showErrorDialog(
+                                    context, '密碼錯誤', '請確認密碼正確後重試');
+                              } on RequiresRecentLoginAuthException {
+                                await showErrorDialog(
+                                    context, '登入過期', '請重新登入後再刪除帳號');
+                              } catch (e) {
+                                await showErrorDialog(
+                                    context, '刪除失敗', e.toString());
+                              }
+                            },
+                            child: const Text(
+                              '刪除帳號',
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ),
+                        ],
+                      )
                     ],
                   ),
                 ),

@@ -47,6 +47,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => MaterialApp(
         // Corrected here
         title: 'Number Connection Test',
+        // not show debug banner
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(
             seedColor: Color(0xFF2E609C),
