@@ -44,10 +44,14 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Firebase file
-lib/firebase_options.dart
+# Avoid Android Studio version conflict
+/android
 
-# vivowatch
-lib\services\asus\service\asus_vivowatch_service.dart
-lib\services\crud\services\asus_vivowatch_service.dart
-lib\services\crud\services\crud_service.dart
+##### UNCOMMENT BELOW IF THE PROJECT IS SET PUBLIC #####
+# # Firebase file
+# lib/firebase_options.dart
+
+# # vivowatch
+# lib\services\asus\service\asus_vivowatch_service.dart
+# lib\services\crud\services\asus_vivowatch_service.dart
+# lib\services\crud\services\crud_service.dart

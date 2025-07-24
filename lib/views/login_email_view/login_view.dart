@@ -47,7 +47,7 @@ class _LoginViewState extends State<LoginView> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                'HE App',
+                '肝肝好',
                 style: Theme.of(context).textTheme.displayLarge,
               ),
               SizedBox(
