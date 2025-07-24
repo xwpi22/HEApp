@@ -45,7 +45,7 @@ app.*.map.json
 /android/app/release
 
 # To avoid Android Studio version conflict
-/android
+# /android
 
 
 ##### UNCOMMENT IF THE PROJECT IS SET OPEN #####
