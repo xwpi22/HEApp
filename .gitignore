@@ -44,8 +44,10 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
-# Avoid Android Studio version conflict
+# Avoid os version conflict
 /android
+/ios
+/macos
 
 ##### UNCOMMENT BELOW IF THE PROJECT IS SET PUBLIC #####
 # # Firebase file
